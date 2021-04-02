@@ -1,0 +1,28 @@
+td {
+  padding: 0.5em 1em;
+}
+
+.coinImageWrapper {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.coinImage {
+  max-width: 100%;
+}
+
+.coinData {
+  padding: 1em 2em;
+}
+
+.coinPrice {
+  text-align: right;
+}
+
+.priceDown {
+  color: red;
+}
+.priceUp {
+  color: lawngreen;
+}

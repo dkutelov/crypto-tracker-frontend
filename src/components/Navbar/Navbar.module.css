@@ -10,6 +10,7 @@
 .logoWrapper {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .logo {
@@ -24,9 +25,11 @@
 
 .navWrapper {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-.loginBtn {
+.authBtn {
   padding: 7px 14px;
   border-radius: 5px;
   background-color: #fbe300;
@@ -37,7 +40,13 @@
   transition: all 0.3s;
 }
 
-.loginBtn:hover {
+.authBtn:hover {
   background-color: #ffd400;
   color: black;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #222222;
+  padding: 0 1em;
 }

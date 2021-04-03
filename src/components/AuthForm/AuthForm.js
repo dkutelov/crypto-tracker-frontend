@@ -46,11 +46,11 @@ const LoginPage = ({ touched, errors }) => {
 
 const LoginFormik = withFormik({
   mapPropsToValues: (props) => {
-    console.log('props', props);
     return {
       username: props.username || '',
       password: props.password || '',
       history: props.history,
+      dispatch: props.dispatch,
     };
   },
   validationSchema: Yup.object().shape({
@@ -69,9 +69,10 @@ const LoginFormik = withFormik({
       .required('Password is required'),
   }),
   handleSubmit: (values) => {
-    const { username, password, history } = values;
+    const { username, password, history, dispatch } = values;
     authService.login(username, password).then((user) => {
       console.log(user);
+      dispatch({ type: 'LOGIN_USER', payload: { user } });
       history.push('/');
     });
   },

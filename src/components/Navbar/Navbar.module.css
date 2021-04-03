@@ -1,0 +1,43 @@
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.heading {
+  padding-left: 10px;
+  color: black;
+}
+
+.navWrapper {
+  list-style: none;
+}
+
+.loginBtn {
+  padding: 7px 14px;
+  border-radius: 5px;
+  background-color: #fbe300;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.loginBtn:hover {
+  background-color: #ffd400;
+  color: black;
+}

@@ -1,5 +1,7 @@
 import { Component } from 'react';
+
 import CryptoList from '../components/CryptoList/CryptoList';
+import Layout from '../components/Layout/Layout';
 
 import * as cryptoService from '../services/cryptoService';
 
@@ -34,7 +36,11 @@ class Homepage extends Component {
 
     if (loading) return <p>Loading ..</p>;
     if (error) return <p>Something went wrong! No data!</p>;
-    return <CryptoList cryptoData={cryptoData} />;
+    return (
+      <Layout>
+        <CryptoList cryptoData={cryptoData} />
+      </Layout>
+    );
   }
 }
 

@@ -3,42 +3,21 @@ import { Component } from 'react';
 import CryptoList from '../components/CryptoList/CryptoList';
 import Layout from '../components/Layout/Layout';
 
-import * as cryptoService from '../services/cryptoService';
-
 class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
       cryptoData: [],
       error: null,
     };
   }
 
-  componentDidMount() {
-    this.setState({ loading: true });
-    cryptoService
-      .getAll()
-      .then((data) => {
-        this.setState({
-          cryptoData: data,
-          loading: false,
-        });
-      })
-      .catch((err) => {
-        this.setState({ loading: false, error: true });
-        console.log(err);
-      });
-  }
-
   render() {
-    const { loading, error, cryptoData } = this.state;
-
-    if (loading) return <p>Loading ..</p>;
+    const { error } = this.state;
     if (error) return <p>Something went wrong! No data!</p>;
     return (
       <Layout>
-        <CryptoList cryptoData={cryptoData} />
+        <CryptoList />
       </Layout>
     );
   }

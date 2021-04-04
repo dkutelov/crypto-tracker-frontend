@@ -1,9 +1,21 @@
+import { useContext } from 'react';
 import CryptoItem from '../CryptoItem/CryptoItem';
 import styles from './CryptoList.module.css';
+import CryptoContext from '../../context/cryptoContext';
 
-const headings = ['', 'Crypto', 'Symbol', 'Price', 'High/ Low 24h', 'Change'];
+const headings = [
+  'Icon',
+  'Crypto',
+  'Symbol',
+  'Price',
+  'High/ Low 24h',
+  'Change',
+  'Volume',
+  'More',
+];
 
-const CryptoList = ({ cryptoData }) => {
+const CryptoList = () => {
+  const cryptoData = useContext(CryptoContext);
   return (
     <div className={styles.container}>
       <table className={styles.wrapper}>

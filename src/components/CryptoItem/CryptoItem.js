@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import './CryptoItem.css';
 import { formatPrice } from '../../utils/formatPrice';
+import MoreIcon from '../../assets/icons/more.svg';
+
 const CryptoItem = ({
+  id,
   name,
   image,
   symbol,
@@ -8,6 +13,7 @@ const CryptoItem = ({
   high_24h: highestPrice,
   low_24h: lowestPrice,
   price_change_percentage_24h: priceChange,
+  total_volume: volume,
 }) => {
   return (
     <tr>
@@ -22,6 +28,12 @@ const CryptoItem = ({
       </td>
       <td className={priceChange < 0 ? 'priceDown' : 'priceUp'}>
         {priceChange.toFixed(2)} %
+      </td>
+      <td style={{ textAlign: 'right' }}>{volume}</td>
+      <td>
+        <Link to={`/coins/${id}`}>
+          <img src={MoreIcon} alt={name} />
+        </Link>
       </td>
     </tr>
   );

@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext, useReducer } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage/Homepage';
 import CoinDetail from './pages/CoinDetail/CoinDetail';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 import Portfolio from './pages/Portfolio';
-import Profile from './pages/Profile';
+import Profile from './pages/Profile/Profile';
 import NotFoundPage from './pages/NotFoundPage';
 
 import UserContext from './context/userContext';
@@ -38,7 +39,7 @@ const App = () => {
             <Route path='/' exact component={Homepage} />
             <Route path='/coins/:name' component={CoinDetail} />
             <Route path='/auth/login' component={Login} />
-            <Route path='/auth/register' component={Login} />
+            <Route path='/auth/register' component={Register} />
             <Route path='/profile' component={Profile} />
             <Route path='/portfolio' component={Portfolio} />
             <Route path='*' component={NotFoundPage} />

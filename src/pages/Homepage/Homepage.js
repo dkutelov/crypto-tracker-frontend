@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import CryptoList from '../components/CryptoList/CryptoList';
-import Layout from '../components/Layout/Layout';
+import CryptoList from '../../components/CryptoList/CryptoList';
+import Layout from '../../components/Layout/Layout';
 
 class Homepage extends Component {
   constructor(props) {

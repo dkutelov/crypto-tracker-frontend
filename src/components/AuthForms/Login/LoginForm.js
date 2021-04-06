@@ -2,8 +2,8 @@ import { withFormik, Form, Field } from 'formik';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
-import styles from './AuthForm.module.css';
-import * as authService from '../../services/authService';
+import styles from '../AuthForms.module.css';
+import * as authService from '../../../services/authService';
 
 const LoginPage = ({ touched, errors }) => {
   return (
@@ -12,8 +12,8 @@ const LoginPage = ({ touched, errors }) => {
         <h2 className={styles.heading}>Login</h2>
         <Form className={styles.formContainer}>
           <div className={styles.inputGroup}>
-            <label htmlFor='email' className={styles.label}>
-              Email
+            <label htmlFor='username' className={styles.label}>
+              Username
             </label>
             <Field type='text' name='username' className={styles.field} />
             {touched.username && errors.username && (

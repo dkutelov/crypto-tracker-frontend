@@ -46,7 +46,7 @@ label.radioSquare {
   padding: 5px 5px;
   cursor: pointer;
   text-align: center;
-  margin: 11px 2.5em 0 2.3em;
+  margin: 11px 0.5em 0 2.3em;
   position: relative;
 }
 
@@ -85,4 +85,10 @@ input[type='radio']:checked + .radioSquare::before {
 .button:hover {
   color: white;
   background-color: #58e7bd;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 0.5em;
 }

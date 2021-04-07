@@ -5,7 +5,8 @@ import Homepage from './pages/Homepage/Homepage';
 import CoinDetail from './pages/CoinDetail/CoinDetail';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Portfolio from './pages/Portfolio';
+import Portfolio from './pages/Portfolio/Portfolio';
+import AddTransaction from './pages/Transaction/Add/AddTransaction';
 import Profile from './pages/Profile/Profile';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -42,6 +43,7 @@ const App = () => {
             <Route path='/auth/register' component={Register} />
             <Route path='/profile' component={Profile} />
             <Route path='/portfolio' component={Portfolio} />
+            <Route path='/transaction/add' component={AddTransaction} />
             <Route path='*' component={NotFoundPage} />
           </Switch>
         </Router>

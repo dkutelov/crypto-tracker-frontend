@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin: 2em 0;
+}
+
+.addLink {
+  padding: 7px 14px;
+  border-radius: 5px;
+  background-color: #fbe300;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addLink:hover {
+  background-color: #ffd400;
+  color: black;
+}

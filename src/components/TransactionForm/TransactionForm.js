@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import styles from './TransactionForm.module.css';
 import './TransactionForm.css';
 import { validate } from '../../utils/transactionFormValidation';
+import PortfolioContext from '../../context/portfolioContext';
 
 const TransactionForm = ({ formType, cryptoOptions }) => {
+  const portfolioContext = useContext(PortfolioContext);
+
+  console.log('portfolioContext', portfolioContext);
   const [formData, setfFormData] = useState({
     type: 'b',
     coinId: '',

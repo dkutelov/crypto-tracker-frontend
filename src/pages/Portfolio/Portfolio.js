@@ -1,9 +1,26 @@
+import { useEffect, useContext, useReducer } from 'react';
 import { Link } from 'react-router-dom';
-import Layout from '../../components/Layout/Layout';
 
+import Layout from '../../components/Layout/Layout';
 import styles from './Portfolio.module.css';
+import * as portfolioService from '../../services/portfolioService';
+import PortfolioContext from '../../context/portfolioContext';
+import portfolioReducer from '../../reducers/portfolio.reducer';
+import UserContext from '../../context/userContext';
 
 const Portfolio = () => {
+  const initialPortfolio = useContext(PortfolioContext);
+  const [state, dispatch] = useReducer(portfolioReducer, initialPortfolio);
+  const userContext = useContext(UserContext);
+
+  useEffect(() => {
+    portfolioService
+      .getOne(userContext.state.user.id, userContext.state.user.token)
+      .then((portfolio) => {
+        dispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
+      });
+  }, [userContext.state.user.id, userContext.state.user.token]);
+
   return (
     <Layout>
       <div className={styles.container}>

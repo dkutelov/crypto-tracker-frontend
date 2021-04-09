@@ -13,7 +13,10 @@ import NotFoundPage from './pages/NotFoundPage';
 import UserContext from './context/userContext';
 import userReducer from './reducers/user.reducer';
 import * as cryptoService from './services/cryptoService';
+import * as portfolioService from './services/portfolioService';
 import CryptoContext from './context/cryptoContext';
+import PortfolioContext from './context/portfolioContext';
+import portfolioReducer from './reducers/portfolio.reducer';
 
 const App = () => {
   const [cryptoData, setCryptoData] = useState([]);
@@ -32,6 +35,22 @@ const App = () => {
       });
   }, []);
 
+  const initialPortfolio = useContext(PortfolioContext);
+  const [portfolioState, portfolioDispatch] = useReducer(
+    portfolioReducer,
+    initialPortfolio
+  );
+
+  useEffect(() => {
+    if (state.user) {
+      portfolioService
+        .getOne(state.user?.id, state.user?.token)
+        .then((portfolio) => {
+          portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
+        });
+    }
+  }, [state.user?.id, state.user?.token]);
+
   return (
     <UserContext.Provider value={{ state, dispatch }}>
       <CryptoContext.Provider value={cryptoData}>
@@ -42,8 +61,12 @@ const App = () => {
             <Route path='/auth/login' component={Login} />
             <Route path='/auth/register' component={Register} />
             <Route path='/profile' component={Profile} />
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/transaction/add' component={AddTransaction} />
+            <PortfolioContext.Provider
+              value={{ portfolioState, portfolioDispatch }}
+            >
+              <Route path='/portfolio' component={Portfolio} />
+              <Route path='/transaction/add' component={AddTransaction} />
+            </PortfolioContext.Provider>
             <Route path='*' component={NotFoundPage} />
           </Switch>
         </Router>

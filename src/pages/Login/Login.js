@@ -2,6 +2,8 @@ import { useContext } from 'react';
 
 import LoginForm from '../../components/AuthForms/Login/LoginForm';
 import Layout from '../../components/Layout/Layout';
+import isGuest from '../../hoc/isGuest';
+
 import UserContext from '../../context/userContext';
 
 const Login = ({ history }) => {
@@ -13,4 +15,4 @@ const Login = ({ history }) => {
   );
 };
 
-export default Login;
+export default isGuest(Login);

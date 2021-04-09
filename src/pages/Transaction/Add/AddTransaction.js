@@ -2,6 +2,8 @@ import { useContext, useState, useEffect } from 'react';
 
 import Layout from '../../../components/Layout/Layout';
 import TransactionForm from '../../../components/TransactionForm/TransactionForm';
+import isAuth from '../../../hoc/isAuth';
+
 import styles from '../Transaction.module.css';
 import CryptoContext from '../../../context/cryptoContext';
 
@@ -27,4 +29,4 @@ const AddTransaction = ({ history }) => {
   );
 };
 
-export default AddTransaction;
+export default isAuth(AddTransaction);

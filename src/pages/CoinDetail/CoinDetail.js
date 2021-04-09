@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import CoinChart from '../../components/CoinCart/CoinChart';
+import CoinChart from '../../components/CoinChart/CoinChart';
 
 import Layout from '../../components/Layout/Layout';
 import * as cryptoService from '../../services/cryptoService';

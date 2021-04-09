@@ -42,11 +42,6 @@ const Navbar = () => {
                 <li className={styles.authBtn} onClick={handleLogout}>
                   Logout
                 </li>
-                <li>
-                  <NavLink to='/auth/register' className={styles.authBtn}>
-                    Register
-                  </NavLink>
-                </li>
               </>
             ) : (
               <li>

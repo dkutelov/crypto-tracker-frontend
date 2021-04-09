@@ -13,7 +13,7 @@ const isGuest = (InnerComponent) => {
     if (isAuthenticated) {
       history.push('/');
 
-      return null;
+      return <span>Loging in</span>;
     }
 
     return <InnerComponent {...props} />;

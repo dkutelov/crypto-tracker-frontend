@@ -8,6 +8,17 @@ function handleErrors(response) {
 }
 
 export const getOne = (userId, token) => {
+  let url = `${baseURL}?id=${userId}`;
+  return fetch(url, {
+    method: 'get',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+  }).then(handleErrors);
+};
+
+export const addTransaction = (data, token) => {
   let url = `${baseURL}`;
   return fetch(url, {
     method: 'post',
@@ -15,6 +26,6 @@ export const getOne = (userId, token) => {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ userId }),
+    body: JSON.stringify(data),
   }).then(handleErrors);
 };

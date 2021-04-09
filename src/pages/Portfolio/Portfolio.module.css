@@ -8,6 +8,12 @@
   margin: 2em 0;
 }
 
+.transactionsHeading {
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .addLink {
   padding: 7px 14px;
   border-radius: 5px;

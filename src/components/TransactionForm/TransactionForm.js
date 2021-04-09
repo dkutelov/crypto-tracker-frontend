@@ -1,19 +1,29 @@
 import { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import styles from './TransactionForm.module.css';
-import './TransactionForm.css';
+import * as portfolioService from '../../services/portfolioService';
 import { validate } from '../../utils/transactionFormValidation';
 import PortfolioContext from '../../context/portfolioContext';
 
-const TransactionForm = ({ formType, cryptoOptions }) => {
-  const portfolioContext = useContext(PortfolioContext);
+import styles from './TransactionForm.module.css';
+import './TransactionForm.css';
+import UserContext from '../../context/userContext';
 
-  console.log('portfolioContext', portfolioContext);
+const TransactionForm = ({ formType, cryptoOptions }) => {
+  const {
+    state: {
+      user: { token },
+    },
+  } = useContext(UserContext);
+  const portfolioContext = useContext(PortfolioContext);
+  const history = useHistory();
+
   const [formData, setfFormData] = useState({
     type: 'b',
     coinId: '',
     amount: 0,
     price: 0,
+    application: '',
   });
   const [formErrors, setfFormErrors] = useState({
     coinId: '',
@@ -30,12 +40,21 @@ const TransactionForm = ({ formType, cryptoOptions }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    const { portfolioState } = portfolioContext;
 
-    // validation
     validate(formData, setfFormErrors);
 
-    // service
+    portfolioService
+      .addTransaction(
+        {
+          ...formData,
+          portfolioId: portfolioState.portfolioId,
+        },
+        token
+      )
+      .then((portfolio) => {
+        history.push('/portfolio');
+      });
   };
 
   return (
@@ -122,6 +141,28 @@ const TransactionForm = ({ formType, cryptoOptions }) => {
           />
           <span className={styles.error}>
             {formErrors.price && formErrors.price}
+          </span>
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor='application' className={styles.label}>
+            App
+          </label>
+          <select
+            id='application'
+            name='application'
+            value={formData.application}
+            onChange={handleInputChange}
+            className={styles.select}
+          >
+            <option value='' disabled='disabled' hidden>
+              Choose Application
+            </option>
+            <option value='binance'>Binance</option>
+            <option value='crypterium'>Crypterium</option>
+            <option value='other'>Other</option>
+          </select>
+          <span className={styles.error}>
+            {formErrors.coinId && formErrors.coinId}
           </span>
         </div>
         <button type='submit' className={styles.button}>

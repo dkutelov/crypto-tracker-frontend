@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 950px;
+  margin: 1em 0 2em;
+  border-spacing: 15px;
+}

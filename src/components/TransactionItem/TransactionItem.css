@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+
+td {
+  background-color: #f9f9f9;
+  padding: 0.5em 1em;
+}
+
+.coinData {
+  padding: 1em 2em;
+}
+
+.coinPrice {
+  text-align: right;
+}
+
+.priceDown {
+  color: red;
+}
+.priceUp {
+  color: lawngreen;
+}
+
+.iconWrapper {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  max-width: 100%;
+}

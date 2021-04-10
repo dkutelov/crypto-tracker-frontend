@@ -7,3 +7,60 @@
 .heading {
   margin: 2em 0;
 }
+
+.transactionWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.transactionDataLabel {
+  background-color: #fbe300;
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.transactionDataValue {
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+
+.confirmBtn {
+  margin-bottom: 5em;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 1em;
+}
+
+.confirmBtn:hover {
+  background-color: #ff3232;
+}
+
+.transactionsHeading {
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.addLink {
+  padding: 7px 14px;
+  border-radius: 5px;
+  background-color: #fbe300;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addLink:hover {
+  background-color: #ffd400;
+  color: black;
+}

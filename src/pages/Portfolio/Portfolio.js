@@ -20,17 +20,6 @@ const Portfolio = () => {
         <div>
           <p>Chart Last 7 Days</p>
         </div>
-
-        <div>
-          <h2 className={styles.transactionsHeading}>My transactions</h2>
-          <TransactionList />
-        </div>
-
-        <div style={{ marginBottom: '2em' }}>
-          <Link to='/transaction/add' className={styles.addLink}>
-            Add transaction
-          </Link>
-        </div>
       </div>
     </Layout>
   );

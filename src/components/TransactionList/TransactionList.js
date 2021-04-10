@@ -29,7 +29,7 @@ const TransactionList = () => {
         </thead>
         <tbody>
           {portfolioState.transactions.map((transaction) => (
-            <TransactionItem key={transaction.id} {...transaction} />
+            <TransactionItem key={transaction._id} {...transaction} />
           ))}
         </tbody>
       </table>

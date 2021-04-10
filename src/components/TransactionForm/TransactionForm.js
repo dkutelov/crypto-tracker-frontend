@@ -40,7 +40,7 @@ const TransactionForm = ({ formType, cryptoOptions }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const { portfolioState } = portfolioContext;
+    const { portfolioState, portfolioDispatch } = portfolioContext;
 
     validate(formData, setfFormErrors);
 
@@ -52,8 +52,13 @@ const TransactionForm = ({ formType, cryptoOptions }) => {
         },
         token
       )
-      .then((portfolio) => {
-        history.push('/portfolio');
+      .then((transaction) => {
+        const { createdTransaction } = transaction;
+        portfolioDispatch({
+          type: 'ADD_TRANSACTION',
+          payload: { transaction: createdTransaction },
+        });
+        history.push('/transactions');
       });
   };
 

@@ -22,7 +22,7 @@ const Navbar = () => {
         <div>
           <NavLink to='/' className={styles.logoWrapper}>
             <img src={logo} alt='crypto helper' className={styles.logo} />
-            <h1 className={styles.heading}>CryptoHelper</h1>
+            <h1 className={styles.heading}>Crypterio</h1>
           </NavLink>
         </div>
         <nav>
@@ -31,7 +31,12 @@ const Navbar = () => {
               <>
                 <li>
                   <NavLink to='/portfolio' className={styles.navLink}>
-                    My Portfio
+                    Portfio
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to='/transactions' className={styles.navLink}>
+                    Transactions
                   </NavLink>
                 </li>
                 <li>

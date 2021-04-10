@@ -6,7 +6,9 @@ import CoinDetail from './pages/CoinDetail/CoinDetail';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Portfolio from './pages/Portfolio/Portfolio';
+import Transactions from './pages/Transaction/Transactions/Transactions';
 import AddTransaction from './pages/Transaction/Add/AddTransaction';
+import DeleteTransaction from './pages/Transaction/Delete/DeleteTransaction';
 import Profile from './pages/Profile/Profile';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -22,7 +24,13 @@ const App = () => {
   const [cryptoData, setCryptoData] = useState([]);
 
   const initialUser = useContext(UserContext);
+  const initialPortfolio = useContext(PortfolioContext);
+
   const [state, dispatch] = useReducer(userReducer, initialUser);
+  const [portfolioState, portfolioDispatch] = useReducer(
+    portfolioReducer,
+    initialPortfolio
+  );
 
   useEffect(() => {
     cryptoService
@@ -34,12 +42,6 @@ const App = () => {
         console.log(err);
       });
   }, []);
-
-  const initialPortfolio = useContext(PortfolioContext);
-  const [portfolioState, portfolioDispatch] = useReducer(
-    portfolioReducer,
-    initialPortfolio
-  );
 
   useEffect(() => {
     if (state.user) {
@@ -65,7 +67,12 @@ const App = () => {
               value={{ portfolioState, portfolioDispatch }}
             >
               <Route path='/portfolio' component={Portfolio} />
-              <Route path='/transaction/add' component={AddTransaction} />
+              <Route path='/transactions' exact component={Transactions} />
+              <Route path='/transactions/add' component={AddTransaction} />
+              <Route
+                path='/transactions/:id/delete'
+                component={DeleteTransaction}
+              />
             </PortfolioContext.Provider>
             <Route path='*' component={NotFoundPage} />
           </Switch>

@@ -29,3 +29,13 @@ export const addTransaction = (data, token) => {
     body: JSON.stringify(data),
   }).then(handleErrors);
 };
+
+export const deleteTransaction = (transactionId, token) => {
+  let url = `${baseURL}?id=${transactionId}`;
+  return fetch(url, {
+    method: 'delete',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }).then(handleErrors);
+};

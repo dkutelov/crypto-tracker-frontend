@@ -15,3 +15,17 @@ some more
 example
 
 **Note: bold example `maeked`, ... !**
+
+### TODO
+
+- search on homepage
+- handle error - server
+- handle error/ notifications - client
+- deploy client to Firebase, deploy server to Heroku
+- profile avatar - dropzone and Cloudinary
+
+### Whishlist
+
+- Google auth
+- Porchase coin with Stripe
+- add animations - [motion](https://www.framer.com/motion/)

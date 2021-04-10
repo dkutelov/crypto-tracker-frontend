@@ -7,25 +7,3 @@
 .heading {
   margin: 2em 0;
 }
-
-.transactionsHeading {
-  margin-top: 1em;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.addLink {
-  padding: 7px 14px;
-  border-radius: 5px;
-  background-color: #fbe300;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #222222;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.addLink:hover {
-  background-color: #ffd400;
-  color: black;
-}

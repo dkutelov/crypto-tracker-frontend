@@ -9,21 +9,25 @@ import styles from './TransactionForm.module.css';
 import './TransactionForm.css';
 import UserContext from '../../context/userContext';
 
-const TransactionForm = ({ formType, cryptoOptions }) => {
+const TransactionForm = ({ formType, cryptoOptions, id }) => {
   const {
     state: {
       user: { token },
     },
   } = useContext(UserContext);
-  const portfolioContext = useContext(PortfolioContext);
+  const { portfolioState, portfolioDispatch } = useContext(PortfolioContext);
   const history = useHistory();
+  let transaction = {};
+  if (formType === 'edit') {
+    transaction = portfolioState.transactions.find((x) => x._id === id);
+  }
 
   const [formData, setfFormData] = useState({
-    type: 'b',
-    coinId: '',
-    amount: 0,
-    price: 0,
-    application: '',
+    type: transaction.type ? transaction.type : 'b',
+    coinId: transaction.coinId ? transaction.coinId : '',
+    amount: transaction.amount ? transaction.amount : 0,
+    price: transaction.price ? transaction.price : 0,
+    application: transaction.application ? transaction.application : '',
   });
   const [formErrors, setfFormErrors] = useState({
     coinId: '',
@@ -40,26 +44,45 @@ const TransactionForm = ({ formType, cryptoOptions }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const { portfolioState, portfolioDispatch } = portfolioContext;
 
     validate(formData, setfFormErrors);
 
-    portfolioService
-      .addTransaction(
-        {
-          ...formData,
-          portfolioId: portfolioState.portfolioId,
-        },
-        token
-      )
-      .then((transaction) => {
-        const { createdTransaction } = transaction;
-        portfolioDispatch({
-          type: 'ADD_TRANSACTION',
-          payload: { transaction: createdTransaction },
+    if (formType === 'add') {
+      portfolioService
+        .addTransaction(
+          {
+            ...formData,
+            portfolioId: portfolioState.portfolioId,
+          },
+          token
+        )
+        .then((transaction) => {
+          const { createdTransaction } = transaction;
+          portfolioDispatch({
+            type: 'ADD_TRANSACTION',
+            payload: { transaction: createdTransaction },
+          });
+          history.push('/transactions');
         });
-        history.push('/transactions');
-      });
+    } else if (formType === 'edit') {
+      portfolioService
+        .editTransaction(
+          {
+            _id: transaction._id,
+            ...formData,
+            portfolioId: portfolioState.portfolioId,
+          },
+          token
+        )
+        .then((transaction) => {
+          const { updatedTransaction } = transaction;
+          portfolioDispatch({
+            type: 'EDIT_TRANSACTION',
+            payload: { transaction: updatedTransaction },
+          });
+          history.push('/transactions');
+        });
+    }
   };
 
   return (

@@ -1,4 +1,3 @@
-import { useEffect, useContext, useReducer } from 'react';
 import { Link } from 'react-router-dom';
 
 import Layout from '../../../components/Layout/Layout';
@@ -11,11 +10,9 @@ const Transactions = () => {
   return (
     <Layout>
       <div className={styles.container}>
-        <h2 className={styles.heading}>My Transactions</h2>
-
+        <h2 className={styles.transactionsHeading}>My Transactions</h2>
         <TransactionList />
-
-        <div style={{ marginBottom: '2em' }}>
+        <div className={styles.newTransactionBtn}>
           <Link to='/transactions/add' className={styles.addLink}>
             Add transaction
           </Link>

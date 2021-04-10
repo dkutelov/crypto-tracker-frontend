@@ -39,3 +39,15 @@ export const deleteTransaction = (transactionId, token) => {
     },
   }).then(handleErrors);
 };
+
+export const editTransaction = (data, token) => {
+  let url = `${baseURL}`;
+  return fetch(url, {
+    method: 'put',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  }).then(handleErrors);
+};

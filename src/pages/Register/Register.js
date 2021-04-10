@@ -2,7 +2,6 @@ import { useContext } from 'react';
 
 import RegisterForm from '../../components/AuthForms/Register/RegisterForm';
 import Layout from '../../components/Layout/Layout';
-import isGuest from '../../hoc/isGuest';
 
 import UserContext from '../../context/userContext';
 
@@ -15,4 +14,4 @@ const Register = ({ history }) => {
   );
 };
 
-export default isGuest(Register);
+export default Register;

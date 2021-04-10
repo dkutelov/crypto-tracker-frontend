@@ -50,7 +50,7 @@
 }
 
 .addLink {
-  padding: 7px 14px;
+  padding: 14px 28px;
   border-radius: 5px;
   background-color: #fbe300;
   text-decoration: none;
@@ -63,4 +63,13 @@
 .addLink:hover {
   background-color: #ffd400;
   color: black;
+}
+
+.newTransactionBtn {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.transactionsHeading {
+  margin: 2em 0 0.5em;
 }

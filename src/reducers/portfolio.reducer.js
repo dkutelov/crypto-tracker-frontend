@@ -13,6 +13,16 @@ function portfolioReducer(portfolioState, { type, payload }) {
         ...portfolioState,
         transactions: [...portfolioState.transactions, payload.transaction],
       };
+    case 'EDIT_TRANSACTION':
+      return {
+        ...portfolioState,
+        transactions: portfolioState.transactions.map((x) => {
+          if (x._id === payload.transaction._id) {
+            return payload.transaction;
+          }
+          return x;
+        }),
+      };
     case 'DELETE_TRANSACTION':
       return {
         ...portfolioState,

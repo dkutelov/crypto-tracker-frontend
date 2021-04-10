@@ -9,6 +9,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Transactions from './pages/Transaction/Transactions/Transactions';
 import AddTransaction from './pages/Transaction/Add/AddTransaction';
 import DeleteTransaction from './pages/Transaction/Delete/DeleteTransaction';
+import EditTransaction from './pages/Transaction/Edit/EditTransaction';
 import Profile from './pages/Profile/Profile';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -72,6 +73,10 @@ const App = () => {
               <Route
                 path='/transactions/:id/delete'
                 component={DeleteTransaction}
+              />
+              <Route
+                path='/transactions/:id/edit'
+                component={EditTransaction}
               />
             </PortfolioContext.Provider>
             <Route path='*' component={NotFoundPage} />

@@ -1,10 +1,18 @@
 # Crypto tracker frontend
 
-This project is a simple page application written in React.
+This project is a simple page application written in React. You need to download the zip file or clone the repo to run the application.
+
+- install dependencies
+
+```
+yarn install
+```
 
 ## Description
 
-Cripterio is an app to monitor all major crypto currency prices and market volumes - current and historical. It also allows for authenticated users to crerate histroy of all their transactrions of crypto currencies.
+Cripterio is an app to monitor all major crypto currency prices and market volumes - current and historical. It provides more detailed information for each currency including last 7 days prices.
+
+The app allows authenticated users to create record and history of all their transactrions with crypto currencies. Cripterio tracks the current value of the user portfolio and its value evolution over the last 7 days.
 
 ### Packages
 
@@ -20,17 +28,18 @@ Cripterio is an app to monitor all major crypto currency prices and market volum
 - this project uses coingecko.com API for crypto currency market data
   [https://api.coingecko.com/api/v3](https://api.coingecko.com/api/v3)
 
-**Note: backend [repo](https://github.com/dkutelov/crypto-tracker-backend) **
+### `Backend`
 
---- notes ---
-**Note: `mareked`, ... !**
+[Link to backend repo](https://github.com/dkutelov/crypto-tracker-backend)
+
+**Notes**
 
 ### TODO
 
 - handle error - server
 - handle error/ notifications - client
 - loading spinner
-- deploy client to Firebase, deploy server to Heroku
+- deploy client to Firebase, deploy server to Heroku (update fronent services)
 - profile avatar - dropzone and Cloudinary
 - coin detail page more data and styling
 - test
@@ -39,3 +48,5 @@ Cripterio is an app to monitor all major crypto currency prices and market volum
 
 - Purchase coin with Stripe
 - add animations - [motion](https://www.framer.com/motion/)
+
+**Note example: `marked`, ... !**

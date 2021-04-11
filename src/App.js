@@ -52,7 +52,7 @@ const App = () => {
           portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
         });
     }
-  }, [state.user?.id, state.user?.token]);
+  }, [state.user]);
 
   return (
     <UserContext.Provider value={{ state, dispatch }}>

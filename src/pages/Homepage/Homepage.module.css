@@ -1,0 +1,31 @@
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 3em 0 1em;
+}
+
+.searchInnerWrapper {
+  position: relative;
+}
+
+.searchInput {
+  padding: 1em 2em;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  font-size: 1.25em;
+  color: #27be94;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.clearIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 22px;
+  right: 0.5em;
+  cursor: pointer;
+}

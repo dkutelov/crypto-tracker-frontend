@@ -1,10 +1,10 @@
 # Crypto tracker frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple page application written in React.
 
 ## Description
 
-some description
+Cripterio is an app to monitor all major crypto currency prices and market volumes - current and historical. It also allows for authenticated users to crerate histroy of all their transactrions of crypto currencies.
 
 ### More
 
@@ -18,9 +18,9 @@ example
 
 ### TODO
 
-- search on homepage
 - handle error - server
 - handle error/ notifications - client
+- loading spinner
 - deploy client to Firebase, deploy server to Heroku
 - profile avatar - dropzone and Cloudinary
 - coin detail page more data and styling

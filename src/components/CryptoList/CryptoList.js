@@ -14,8 +14,14 @@ const headings = [
   'More',
 ];
 
-const CryptoList = () => {
-  const cryptoData = useContext(CryptoContext);
+const CryptoList = ({ searchTerm }) => {
+  let cryptoData = useContext(CryptoContext);
+
+  if (searchTerm) {
+    cryptoData = cryptoData.filter((coin) =>
+      coin.id.startsWith(searchTerm.toLowerCase())
+    );
+  }
   return (
     <div className={styles.container}>
       <table className={styles.wrapper}>

@@ -24,6 +24,7 @@ example
 - deploy client to Firebase, deploy server to Heroku
 - profile avatar - dropzone and Cloudinary
 - coin detail page more data and styling
+- test
 
 ### Whishlist
 

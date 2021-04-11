@@ -56,14 +56,14 @@ const App = () => {
 
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-      <CryptoContext.Provider value={cryptoData}>
-        <Router>
-          <Switch>
+      <Router>
+        <Switch>
+          <Route path='/auth/login' component={Login} />
+          <Route path='/auth/register' component={Register} />
+          <Route path='/profile' component={Profile} />
+          <CryptoContext.Provider value={cryptoData}>
             <Route path='/' exact component={Homepage} />
             <Route path='/coins/:name' component={CoinDetail} />
-            <Route path='/auth/login' component={Login} />
-            <Route path='/auth/register' component={Register} />
-            <Route path='/profile' component={Profile} />
             <PortfolioContext.Provider
               value={{ portfolioState, portfolioDispatch }}
             >
@@ -79,10 +79,10 @@ const App = () => {
                 component={EditTransaction}
               />
             </PortfolioContext.Provider>
-            <Route path='*' component={NotFoundPage} />
-          </Switch>
-        </Router>
-      </CryptoContext.Provider>
+          </CryptoContext.Provider>
+          <Route path='*' component={NotFoundPage} />
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 };

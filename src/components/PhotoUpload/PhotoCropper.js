@@ -6,21 +6,22 @@ const PhotoCropper = ({ setImage, image }) => {
   const cropperRef = useRef(null);
 
   const onCrop = () => {
-    if (typeof cropperRef.current.getCroppedCanvas() === 'undefined') {
+    const imageElement = cropperRef?.current;
+    const cropper = imageElement?.cropper;
+    if (typeof cropper.getCroppedCanvas() === 'undefined') {
       return;
     }
-    cropperRef.current.getCroppedCanvas().toBlob((blob) => {
+    cropper.getCroppedCanvas().toBlob((blob) => {
       setImage(blob);
-    }, 'image/jpeg');
+    }, 'image/jpg');
   };
 
   return (
     <Cropper
       src={image}
       style={{ height: 200, width: '100%' }}
-      // Cropper.js options
       initialAspectRatio={1}
-      priview='.imagePreview'
+      preview='.img-preview'
       guides={false}
       viewMode={1}
       dragMode='move'

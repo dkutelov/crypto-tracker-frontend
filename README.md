@@ -22,6 +22,7 @@ The app allows authenticated users to create record and history of all their tra
 - date-fns for dates formating and calculation
 - react-dropzone for image upload
 - react-cropper for avatar cropping
+- firebase storage - image upload for avatar
 
 ### `External API`
 
@@ -37,10 +38,10 @@ The app allows authenticated users to create record and history of all their tra
 ### TODO
 
 - handle error - server
-- handle error/ notifications - client
+- handle error/ notifications - client, common error handler
 - loading spinner
 - deploy client to Firebase, deploy server to Heroku (update fronent services)
-- profile avatar - dropzone and Cloudinary
+- profile pages and styling
 - coin detail page more data and styling
 - test
 

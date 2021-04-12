@@ -1,7 +1,20 @@
+.container {
+  margin: 1em 0 2.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 25px;
+}
+
+.cropWrapper,
+.buttonWrapper {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
 .dropzone {
-  width: 200px;
-  height: 200px;
-  border: 2px solid #27be94;
+  width: 230px;
+  height: 230px;
+  border: 2px solid #fbe300;
   border-radius: 20px;
   text-align: center;
   display: flex;

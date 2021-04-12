@@ -21,15 +21,17 @@ const PhotoDropzone = ({ setFiles }) => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div
-      {...getRootProps()}
-      className={styles.dropzone}
-      style={{ borderColor: isDragActive ? '#beedaf' : '#27be94' }}
-    >
-      <input {...getInputProps()} />
-      <img src={uploadFile} alt='upload icon' className={styles.uploadIcon} />
-      <p>Drop Image Here</p>
-    </div>
+    <>
+      <h4>Drop Image Here</h4>
+      <div
+        {...getRootProps()}
+        className={styles.dropzone}
+        style={{ borderColor: isDragActive ? '#27be94' : '#fbe300' }}
+      >
+        <input {...getInputProps()} />
+        <img src={uploadFile} alt='upload icon' className={styles.uploadIcon} />
+      </div>
+    </>
   );
 };
 

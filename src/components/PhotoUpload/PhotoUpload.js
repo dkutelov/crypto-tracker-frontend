@@ -6,6 +6,7 @@ import cuid from 'cuid';
 import UserContext from '../../context/userContext';
 import { getFileExtension } from '../../utils/getFileExtention';
 import * as firbaseService from '../../services/firebaseService';
+import styles from './PhotoUpload.module.css';
 
 const PhotoUpload = () => {
   const [files, setFiles] = useState([]);
@@ -49,28 +50,37 @@ const PhotoUpload = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        {files.length > 0 && (
-          <PhotoCropper setImage={setImage} image={files[0].preview} />
-        )}
-      </div>
-      <div>
-        <h4>Upload your photo</h4>
         <PhotoDropzone setFiles={setFiles} />
       </div>
       <div>
         {files.length > 0 && (
           <>
+            <h4>Crop Preview</h4>
             <div
               className='img-preview'
-              style={{ minHeight: 200, minWidth: 200, overflow: 'hidden' }}
+              style={{
+                minHeight: 230,
+                minWidth: 230,
+                borderRadius: 20,
+                overflow: 'hidden',
+              }}
             />
-            <button onClick={uploadImage}>check</button>
-            <button>close</button>
           </>
         )}
       </div>
+      <div className={styles.cropWrapper}>
+        {files.length > 0 && (
+          <PhotoCropper setImage={setImage} image={files[0].preview} />
+        )}
+      </div>
+      {files.length > 0 && (
+        <div className={styles.buttonWrapper}>
+          <button onClick={uploadImage}>Upload</button>
+          <button>Cancel</button>
+        </div>
+      )}
     </div>
   );
 };

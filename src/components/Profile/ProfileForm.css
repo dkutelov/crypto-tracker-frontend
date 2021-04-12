@@ -1,0 +1,29 @@
+select {
+  width: 100%;
+  margin: 0;
+  margin-top: 1em;
+  outline: 0;
+  background-color: #eff0f1;
+  border: 1px solid #eff0f1;
+  border-radius: 3px;
+  padding: 15.5px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: window;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  display: block;
+  height: 51px;
+  padding-left: 10px;
+  font-weight: 300;
+  overflow: hidden;
+  background-position: 95% 60%;
+  font-size: 0.9em;
+  color: #9da3a8;
+  background: url(../../assets/icons/downArrow.svg) no-repeat #eff0f1;
+  background-size: 15px;
+  background-position: 97.5% 50%;
+}
+
+select::-ms-expand {
+  display: none;
+}

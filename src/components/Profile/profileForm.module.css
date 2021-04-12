@@ -1,0 +1,94 @@
+.formWrapper {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  margin: 10px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .formWrapper {
+    margin: 0 auto 40px;
+    width: 490px;
+    padding: 30px;
+  }
+}
+
+.inputGroup {
+  margin-bottom: 2.5em;
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #fbe300;
+  color: #27be94;
+  transition: all 0.3 ease-in-out;
+}
+
+.field:focus,
+.field:active {
+  border-bottom: 1px solid #27be94;
+}
+
+.field:focus {
+  outline: none;
+}
+
+.label {
+  display: block;
+  text-align: left;
+}
+
+label.radioSquare {
+  display: inline-block;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+  margin: 11px 0.5em 0 2.3em;
+  position: relative;
+}
+
+.radioSquare::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -35px;
+  display: block;
+  width: 30px;
+  height: 15px;
+  border: 2px solid #fbe300;
+  border-radius: 1px;
+  background-color: white;
+}
+
+input[type='radio']:checked + .radioSquare::before {
+  content: '';
+  background-color: #27be94;
+  transition: background 100ms ease 0.1s;
+  border: 2px solid #27be94;
+}
+
+.button {
+  color: #424242;
+  background-color: #fbe300;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 1em;
+}
+
+.button:hover {
+  color: white;
+  background-color: #58e7bd;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 0.5em;
+}

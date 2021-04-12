@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import CoinChart from '../../components/CoinChart/CoinChart';
 
 import Layout from '../../components/Layout/Layout';
+import Loading from '../../components/Loading/Loading';
 import * as cryptoService from '../../services/cryptoService';
 import styles from './CoinDetail.module.css';
 
@@ -24,25 +25,28 @@ const CoinDetail = ({ match }) => {
       });
   }, [id]);
 
-  if (loading) return <p>Loading ...</p>;
   return (
     <Layout>
-      <div className={styles.container}>
-        <div style={{ textAlign: 'center' }}>
-          <img src={coinData.image.large} alt={coinData.name} />
-          <h2>{coinData.name}</h2>
-          <p>Current price: USD {coinData.market_data.current_price.usd}</p>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className={styles.container}>
+          <div style={{ textAlign: 'center' }}>
+            <img src={coinData.image.large} alt={coinData.name} />
+            <h2>{coinData.name}</h2>
+            <p>Current price: USD {coinData.market_data.current_price.usd}</p>
+          </div>
+          <CoinChart data={coinData.market_data.sparkline_7d} />
+          <div className={styles.contentBlock}>
+            <h3>Description</h3>
+            <p dangerouslySetInnerHTML={{ __html: coinData.description.en }} />
+          </div>
+          <div className={styles.contentBlock}>
+            <h3>Categories</h3>
+            <p>{coinData.categories.join(', ')}</p>
+          </div>
         </div>
-        <CoinChart data={coinData.market_data.sparkline_7d} />
-        <div className={styles.contentBlock}>
-          <h3>Description</h3>
-          <p dangerouslySetInnerHTML={{ __html: coinData.description.en }} />
-        </div>
-        <div className={styles.contentBlock}>
-          <h3>Categories</h3>
-          <p>{coinData.categories.join(', ')}</p>
-        </div>
-      </div>
+      )}
     </Layout>
   );
 };

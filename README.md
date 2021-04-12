@@ -1,6 +1,8 @@
 # Crypto tracker frontend
 
-This project is a simple page application written in React. You need to download the zip file or clone the repo to run the application.
+This project is a simple page application written in React. The application is an exam project for Softuni React course 4/2021. The project is using a backend written in Node/ Express (see the link to the repo in the backend section). The backend is using a MongoDB database in Atlas cloud. Images for avatars of the users are uploaded to Firbase cloud storage.
+
+To run the application you need to download the zip file or clone the repo to run the application.
 
 - install dependencies
 
@@ -10,9 +12,13 @@ yarn install
 
 ## Description
 
-Cripterio is an app to monitor all major crypto currency prices and market volumes - current and historical. It provides more detailed information for each currency including last 7 days prices.
+Cripterio is an app to monitor all major crypto currency prices and market volumes - current and historical.
 
-The app allows authenticated users to create record and history of all their transactrions with crypto currencies. Cripterio tracks the current value of the user portfolio and its value evolution over the last 7 days.
+The application provides more detailed information for each currency including last 7 days prices, current price and description.
+
+Crypterio allows authenticated users to create record and history of all their transactrions with crypto currencies. It provides full CRUD functionality for each transaction.
+
+The application allows authenticated users to monitor the current value of their portfolio and how its value evolved over the last 7 days.
 
 ### Packages
 

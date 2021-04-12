@@ -23,6 +23,7 @@ import portfolioReducer from './reducers/portfolio.reducer';
 
 const App = () => {
   const [cryptoData, setCryptoData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const initialUser = useContext(UserContext);
   const initialPortfolio = useContext(PortfolioContext);
@@ -34,10 +35,12 @@ const App = () => {
   );
 
   useEffect(() => {
+    setLoading(true);
     cryptoService
       .getAll()
       .then((data) => {
         setCryptoData(data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -62,7 +65,11 @@ const App = () => {
           <Route path='/auth/register' component={Register} />
           <Route path='/profile' component={Profile} />
           <CryptoContext.Provider value={cryptoData}>
-            <Route path='/' exact component={Homepage} />
+            <Route
+              path='/'
+              exact
+              render={() => <Homepage loading={loading} />}
+            />
             <Route path='/coins/:name' component={CoinDetail} />
             <PortfolioContext.Provider
               value={{ portfolioState, portfolioDispatch }}

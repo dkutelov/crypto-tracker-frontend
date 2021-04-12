@@ -17,20 +17,23 @@ const PhotoCropper = ({ setImage, image }) => {
   };
 
   return (
-    <Cropper
-      src={image}
-      style={{ height: 200, width: '100%' }}
-      initialAspectRatio={1}
-      preview='.img-preview'
-      guides={false}
-      viewMode={1}
-      dragMode='move'
-      scalable={true}
-      cropBoxMovable={true}
-      cropBoxResizable={true}
-      crop={onCrop}
-      ref={cropperRef}
-    />
+    <>
+      <h4>Crop/ Zoom your avatar</h4>
+      <Cropper
+        src={image}
+        style={{ height: 300, width: '100%' }}
+        initialAspectRatio={1}
+        preview='.img-preview'
+        guides={false}
+        viewMode={1}
+        dragMode='move'
+        scalable={true}
+        cropBoxMovable={true}
+        cropBoxResizable={true}
+        crop={onCrop}
+        ref={cropperRef}
+      />{' '}
+    </>
   );
 };
 

@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 2em 0;
+}
+
+.info-section {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+select {
+  width: 100%;
+  margin: 0;
+  margin-top: 1em;
+  outline: 0;
+  background-color: #eff0f1;
+  border: 1px solid #eff0f1;
+  border-radius: 3px;
+  padding: 15.5px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: window;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  display: block;
+  height: 51px;
+  padding-left: 10px;
+  font-weight: 300;
+  overflow: hidden;
+  background-position: 95% 60%;
+  font-size: 0.9em;
+  color: #9da3a8;
+  background: url(../../assets/icons/downArrow.svg) no-repeat #eff0f1;
+  background-size: 15px;
+  background-position: 97.5% 50%;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.field {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #fbe300;
+  color: #27be94;
+  transition: all 0.3 ease-in-out;
+}
+
+.field:focus,
+.field:active {
+  border-bottom: 1px solid #27be94;
+}
+
+.field:focus {
+  outline: none;
+}
+
+.label {
+  display: block;
+  text-align: left;
+}
+
+.info-credit-card {
+  margin: 1em 0;
+}
+
+.payBtnWrapper {
+  margin: 1em 0 2em;
+  display: flex;
+  justify-content: center;
+}

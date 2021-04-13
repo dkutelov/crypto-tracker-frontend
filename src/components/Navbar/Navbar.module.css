@@ -29,7 +29,8 @@
   align-items: center;
 }
 
-.authBtn {
+.authBtn,
+.navLinkButton {
   padding: 7px 14px;
   border-radius: 5px;
   background-color: #fbe300;
@@ -49,4 +50,14 @@
   text-decoration: none;
   color: #222222;
   padding: 0 1em;
+}
+
+.navLinkButton {
+  background-color: #27be94;
+  color: white;
+  margin: 0 0.5em;
+}
+
+.navLinkButton:hover {
+  background-color: #58e7bd;
 }

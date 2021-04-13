@@ -15,6 +15,7 @@ const Portfolio = () => {
   const {
     portfolioState: { transactions },
   } = useContext(PortfolioContext);
+
   const cryptoData = useContext(CryptoContext);
   const currentPrices = getCurrentPrices(cryptoData);
 

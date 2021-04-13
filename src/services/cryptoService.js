@@ -33,3 +33,14 @@ export const getOne = (id) => {
 
   return fetch(url).then(handleErrors);
 };
+
+export const getCurrentPrice = (id) => {
+  let url =
+    `${baseURL}/simple/price?` +
+    new URLSearchParams({
+      ids: id,
+      vs_currencies: 'usd',
+    });
+
+  return fetch(url).then(handleErrors);
+};

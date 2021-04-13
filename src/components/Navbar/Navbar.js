@@ -44,6 +44,11 @@ const Navbar = () => {
                     Profile
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to='/buy' className={styles.navLinkButton}>
+                    Buy
+                  </NavLink>
+                </li>
                 <li className={styles.authBtn} onClick={handleLogout}>
                   Logout
                 </li>

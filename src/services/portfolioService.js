@@ -7,8 +7,8 @@ function handleErrors(response) {
   return response.json();
 }
 
-export const getOne = (userId, token) => {
-  let url = `${baseURL}?id=${userId}`;
+export const getOne = (token) => {
+  let url = `${baseURL}`;
   return fetch(url, {
     method: 'get',
     headers: {

@@ -12,6 +12,7 @@ import DeleteTransaction from './pages/Transaction/Delete/DeleteTransaction';
 import EditTransaction from './pages/Transaction/Edit/EditTransaction';
 import Profile from './pages/Profile/Profile';
 import EditProfile from './pages/Profile/EditProfile';
+import BuyCoin from './pages/BuyCoin/BuyCoin';
 import NotFoundPage from './pages/NotFoundPage';
 
 import UserContext from './context/userContext';
@@ -52,11 +53,9 @@ const App = () => {
 
   useEffect(() => {
     if (state.user) {
-      portfolioService
-        .getOne(state.user?.id, state.user?.token)
-        .then((portfolio) => {
-          portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
-        });
+      portfolioService.getOne(state.user?.token).then((portfolio) => {
+        portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
+      });
     }
   }, [state.user]);
 
@@ -79,6 +78,7 @@ const App = () => {
               value={{ portfolioState, portfolioDispatch }}
             >
               <Route path='/portfolio' component={Portfolio} />
+              <Route path='/buy' component={BuyCoin} />
               <Route path='/transactions' exact component={Transactions} />
               <Route path='/transactions/add' component={AddTransaction} />
               <Route

@@ -45,9 +45,7 @@ The application allows authenticated users to monitor the current value of their
 
 - handle error - server
 - handle error/ notifications - client, common error handler
-- loading spinner
 - deploy client to Firebase, deploy server to Heroku (update fronent services)
-- profile pages and styling
 - coin detail page more data and styling
 - test
 

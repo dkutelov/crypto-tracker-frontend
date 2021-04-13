@@ -92,3 +92,9 @@ input[type='radio']:checked + .radioSquare::before {
   font-size: 12px;
   margin-top: 0.5em;
 }
+
+.avatarPreview {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}

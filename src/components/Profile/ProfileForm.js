@@ -14,24 +14,30 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
       user: { token },
     },
   } = useContext(UserContext);
+  const [uploadAvatar, setUploadAvatar] = useState(true);
 
   const history = useHistory();
 
-  const [formData, setfFormData] = useState({
+  const [formData, setFormData] = useState({
     avatarUrl: '',
     firstName: '',
     lastName: '',
     email: '',
   });
 
-  const [formErrors, setfFormErrors] = useState({
+  const [formErrors, setFormErrors] = useState({
     coinId: '',
     amount: '',
     price: '',
   });
 
+  const handleAddAvatar = (downloadUrl) => {
+    setFormData((state) => ({ ...state, avatarUrl: downloadUrl }));
+    setUploadAvatar(false);
+  };
+
   const handleInputChange = (e) => {
-    setfFormData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
     }));
@@ -40,7 +46,7 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    validate(formData, setfFormErrors);
+    validate(formData, setFormErrors);
 
     if (formType === 'create') {
     } else if (formType === 'edit') {
@@ -49,8 +55,28 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
 
   return (
     <div className={styles.formWrapper}>
-      <span className={styles.label}>Avatar</span>
-      <PhotoUpload />
+      <div>
+        <span className={styles.label}>Avatar</span>
+        {formData.avatarUrl && !uploadAvatar ? (
+          <img
+            src={formData.avatarUrl}
+            alt='uploaded avatar preview'
+            className={styles.avatarPreview}
+          />
+        ) : (
+          <PhotoUpload handleAddAvatar={handleAddAvatar} />
+        )}
+        <div>
+          {!uploadAvatar && (
+            <button
+              onClick={() => setUploadAvatar(true)}
+              className={styles.button}
+            >
+              Update
+            </button>
+          )}
+        </div>
+      </div>
       <form onSubmit={handleFormSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor='first-name' className={styles.label}>
@@ -92,7 +118,7 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
             type='email'
             name='email'
             id='email'
-            value={formData.firstName}
+            value={formData.email}
             onChange={handleInputChange}
             className={styles.field}
           />

@@ -8,7 +8,7 @@ import { getFileExtension } from '../../utils/getFileExtention';
 import * as firbaseService from '../../services/firebaseService';
 import styles from './PhotoUpload.module.css';
 
-const PhotoUpload = () => {
+const PhotoUpload = ({ handleAddAvatar }) => {
   const [files, setFiles] = useState([]);
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -41,9 +41,8 @@ const PhotoUpload = () => {
       },
       () => {
         uploadTask.snapshot.ref.getDownloadURL().then((downloadUrl) => {
-          console.log(downloadUrl);
-          setLoading(false); // move in profileService
-          handleCancelCrop();
+          handleAddAvatar(downloadUrl);
+          setLoading(false);
         });
       }
     );
@@ -77,8 +76,12 @@ const PhotoUpload = () => {
       </div>
       {files.length > 0 && (
         <div className={styles.buttonWrapper}>
-          <button onClick={uploadImage}>Upload</button>
-          <button>Cancel</button>
+          <button className={styles.uploadButton} onClick={uploadImage}>
+            {loading ? 'Uploading' : 'Upload'}
+          </button>
+          <button className={styles.cancelButton} onClick={handleCancelCrop}>
+            Cancel
+          </button>
         </div>
       )}
     </div>

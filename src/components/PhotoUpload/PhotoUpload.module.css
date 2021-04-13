@@ -31,3 +31,30 @@
   width: 100px;
   height: 100px;
 }
+
+.uploadButton,
+.cancelButton {
+  padding: 7px 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fbe300;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 1em;
+}
+
+.uploadButton:hover {
+  background-color: #ffd400;
+  color: black;
+}
+
+.cancelButton {
+  background-color: red;
+  color: white;
+}
+
+.cancelButton:hover {
+}

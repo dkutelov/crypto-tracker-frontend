@@ -7,12 +7,24 @@ function handleErrors(response) {
   return response.json();
 }
 
-export const getProfile = (userId, token) => {
-  let url = `${baseURL}?id=${userId}`;
+export const getProfile = (token) => {
+  let url = `${baseURL}`;
   return fetch(url, {
     method: 'get',
     headers: {
       Authorization: `Bearer ${token}`,
     },
+  }).then(handleErrors);
+};
+
+export const createProfile = (data, token) => {
+  let url = `${baseURL}`;
+  return fetch(url, {
+    method: 'post',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
   }).then(handleErrors);
 };

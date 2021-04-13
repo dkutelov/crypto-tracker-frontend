@@ -2,13 +2,13 @@ import { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import PhotoUpload from '../PhotoUpload/PhotoUpload';
-import { validate } from '../../utils/transactionFormValidation';
+import UserContext from '../../context/userContext';
+import * as profileService from '../../services/profileService';
 
 import styles from './profileForm.module.css';
 import './ProfileForm.css';
-import UserContext from '../../context/userContext';
 
-const CreateProfile = ({ formType, cryptoOptions, id }) => {
+const CreateProfile = ({ formType, setProfile }) => {
   const {
     state: {
       user: { token },
@@ -26,9 +26,7 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
   });
 
   const [formErrors, setFormErrors] = useState({
-    coinId: '',
-    amount: '',
-    price: '',
+    error: '',
   });
 
   const handleAddAvatar = (downloadUrl) => {
@@ -46,9 +44,18 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    validate(formData, setFormErrors);
+    if (
+      formData.firstName === '' ||
+      formData.lastName === '' ||
+      formData.email === ''
+    ) {
+      setFormErrors({ error: 'Fields can not be empty!' });
+    }
 
     if (formType === 'create') {
+      profileService.createProfile(formData, token).then(({ profile }) => {
+        setProfile(profile);
+      });
     } else if (formType === 'edit') {
     }
   };
@@ -90,9 +97,6 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
             onChange={handleInputChange}
             className={styles.field}
           />
-          <span className={styles.error}>
-            {formErrors.amount && formErrors.amount}
-          </span>
         </div>
         <div className={styles.inputGroup}>
           <label htmlFor='last-name' className={styles.label}>
@@ -106,9 +110,6 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
             onChange={handleInputChange}
             className={styles.field}
           />
-          <span className={styles.error}>
-            {formErrors.amount && formErrors.amount}
-          </span>
         </div>
         <div className={styles.inputGroup}>
           <label htmlFor='email' className={styles.label}>
@@ -122,9 +123,10 @@ const CreateProfile = ({ formType, cryptoOptions, id }) => {
             onChange={handleInputChange}
             className={styles.field}
           />
-          <span className={styles.error}>
-            {formErrors.amount && formErrors.amount}
-          </span>
+        </div>
+
+        <div className={styles.error}>
+          {formErrors.error && formErrors.error}
         </div>
 
         <button type='submit' className={styles.button}>

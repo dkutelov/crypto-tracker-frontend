@@ -20,7 +20,7 @@ const Profile = () => {
   } = useContext(UserContext);
   useEffect(() => {
     setLoading(true);
-    profileService.getProfile(user.id, user.token).then((profile) => {
+    profileService.getProfile(user.token).then((profile) => {
       if (!profile) {
         setProfileExists(false);
       } else {
@@ -38,14 +38,14 @@ const Profile = () => {
         <div className={styles.container}>
           <h2>My Profile</h2>
 
-          {profileExists ? (
+          {profileExists || profile ? (
             <>
               <p>show profile</p>
             </>
           ) : (
             <>
               <h4>No profile yet, create one!</h4>
-              <ProfileForm formType='create' />
+              <ProfileForm formType='create' setProfile={setProfile} />
             </>
           )}
         </div>

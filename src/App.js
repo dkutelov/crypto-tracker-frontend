@@ -11,15 +11,18 @@ import AddTransaction from './pages/Transaction/Add/AddTransaction';
 import DeleteTransaction from './pages/Transaction/Delete/DeleteTransaction';
 import EditTransaction from './pages/Transaction/Edit/EditTransaction';
 import Profile from './pages/Profile/Profile';
+import EditProfile from './pages/Profile/EditProfile';
 import NotFoundPage from './pages/NotFoundPage';
 
 import UserContext from './context/userContext';
-import userReducer from './reducers/user.reducer';
-import * as cryptoService from './services/cryptoService';
-import * as portfolioService from './services/portfolioService';
 import CryptoContext from './context/cryptoContext';
 import PortfolioContext from './context/portfolioContext';
+
+import userReducer from './reducers/user.reducer';
 import portfolioReducer from './reducers/portfolio.reducer';
+
+import * as cryptoService from './services/cryptoService';
+import * as portfolioService from './services/portfolioService';
 
 const App = () => {
   const [cryptoData, setCryptoData] = useState([]);
@@ -64,6 +67,7 @@ const App = () => {
           <Route path='/auth/login' component={Login} />
           <Route path='/auth/register' component={Register} />
           <Route path='/profile' component={Profile} />
+          <Route path='/profile/edit' component={EditProfile} />
           <CryptoContext.Provider value={cryptoData}>
             <Route
               path='/'

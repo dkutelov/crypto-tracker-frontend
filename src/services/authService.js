@@ -20,6 +20,7 @@ export const login = (username, password) => {
 };
 
 export const register = (username, password) => {
+  console.log(username, password);
   let url = `${baseURL}/register`;
   return fetch(url, {
     method: 'post',

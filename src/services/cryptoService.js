@@ -44,3 +44,15 @@ export const getCurrentPrice = (id) => {
 
   return fetch(url).then(handleErrors);
 };
+
+export const getLastSevenDaysPrices = (id) => {
+  let url =
+    `${baseURL}/coins/${id}/market_chart?` +
+    new URLSearchParams({
+      vs_currency: 'usd',
+      days: 7,
+      interval: 'daily',
+    });
+
+  return fetch(url).then(handleErrors);
+};

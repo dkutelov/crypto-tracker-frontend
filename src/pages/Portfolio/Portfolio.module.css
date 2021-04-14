@@ -7,3 +7,18 @@
 .heading {
   margin: 2em 0;
 }
+
+.chartContainer {
+  margin: 2em 0 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subheading {
+  display: inline-block;
+  margin: 0 auto 2em;
+  background-color: #fbe300;
+  font-weight: normal;
+  padding: 0.5em 2em;
+}

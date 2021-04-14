@@ -18,7 +18,7 @@ const DisplayProfile = ({ profile }) => {
         <p className={styles.infoData}>{email}</p>
 
         <div className={styles.editLinkWrapper}>
-          <Link to={`/profile/edit/${_id}`} className={styles.editLink}>
+          <Link to={`/profile/edit`} className={styles.editLink}>
             Edit
           </Link>
         </div>

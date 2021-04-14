@@ -28,3 +28,15 @@ export const createProfile = (data, token) => {
     body: JSON.stringify(data),
   }).then(handleErrors);
 };
+
+export const editProfile = (data, token) => {
+  let url = `${baseURL}`;
+  return fetch(url, {
+    method: 'put',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  }).then(handleErrors);
+};

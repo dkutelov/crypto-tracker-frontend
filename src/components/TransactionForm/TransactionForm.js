@@ -18,6 +18,7 @@ const TransactionForm = ({ formType, cryptoOptions, id }) => {
   const { portfolioState, portfolioDispatch } = useContext(PortfolioContext);
   const history = useHistory();
   let transaction = {};
+
   if (formType === 'edit') {
     transaction = portfolioState.transactions.find((x) => x._id === id);
   }

@@ -24,10 +24,12 @@ import portfolioReducer from './reducers/portfolio.reducer';
 
 import * as cryptoService from './services/cryptoService';
 import * as portfolioService from './services/portfolioService';
+import * as profileService from './services/profileService';
 
 const App = () => {
   const [cryptoData, setCryptoData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [profile, setProfile] = useState({});
 
   const initialUser = useContext(UserContext);
   const initialPortfolio = useContext(PortfolioContext);
@@ -59,14 +61,37 @@ const App = () => {
     }
   }, [state.user]);
 
+  useEffect(() => {
+    if (state.user) {
+      profileService.getProfile(state.user?.token).then((profile) => {
+        setProfile(profile);
+      });
+    }
+  }, [state.user]);
+
   return (
     <UserContext.Provider value={{ state, dispatch }}>
       <Router>
         <Switch>
           <Route path='/auth/login' component={Login} />
           <Route path='/auth/register' component={Register} />
-          <Route path='/profile' exact component={Profile} />
-          <Route path='/profile/edit/:id' component={EditProfile} />
+          <Route
+            path='/profile'
+            exact
+            render={(props) => (
+              <Profile {...props} profile={profile} setProfile={setProfile} />
+            )}
+          />
+          <Route
+            path='/profile/edit'
+            render={(props) => (
+              <EditProfile
+                {...props}
+                profile={profile}
+                setProfile={setProfile}
+              />
+            )}
+          />
           <CryptoContext.Provider value={cryptoData}>
             <Route
               path='/'

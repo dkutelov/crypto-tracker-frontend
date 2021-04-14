@@ -90,7 +90,7 @@ const RegisterFormik = withFormik({
     authService
       .register(username, password)
       .then((user) => {
-        console.log(user);
+        console.log('user', user);
         dispatch({ type: 'LOGIN_USER', payload: { user } });
         history.push('/');
       })

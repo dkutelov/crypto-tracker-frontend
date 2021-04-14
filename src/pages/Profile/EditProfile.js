@@ -1,13 +1,22 @@
 import Layout from '../../components/Layout/Layout';
+import isAuth from '../../hoc/isAuth';
+import ProfileForm from '../../components/Profile/ProfileForm/ProfileForm';
 
-const EditProfile = () => {
+import styles from './Profile.module.css';
+
+const EditProfile = ({ profile, setProfile }) => {
   return (
     <Layout>
-      <div>
-        <h1>EditProfile</h1>
+      <div className={styles.container}>
+        <h2>Edit Your Profile</h2>
+        <ProfileForm
+          formType='edit'
+          setProfile={setProfile}
+          profile={profile}
+        />
       </div>
     </Layout>
   );
 };
 
-export default EditProfile;
+export default isAuth(EditProfile);

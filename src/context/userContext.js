@@ -6,5 +6,6 @@ const initialData = {
 };
 
 const userContext = createContext(initialData);
+userContext.displayName = 'UserContext';
 
 export default userContext;

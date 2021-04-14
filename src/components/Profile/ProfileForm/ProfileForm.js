@@ -8,21 +8,23 @@ import * as profileService from '../../../services/profileService';
 import styles from './ProfileForm.module.css';
 import './ProfileForm.css';
 
-const CreateProfile = ({ formType, setProfile }) => {
+const ProfileForm = ({ formType, setProfile, profile }) => {
   const {
     state: {
       user: { token },
     },
   } = useContext(UserContext);
-  const [uploadAvatar, setUploadAvatar] = useState(true);
+  const [uploadAvatar, setUploadAvatar] = useState(
+    formType === 'create' ? true : false
+  );
 
   const history = useHistory();
 
   const [formData, setFormData] = useState({
-    avatarUrl: '',
-    firstName: '',
-    lastName: '',
-    email: '',
+    avatarUrl: profile ? profile.avatarUrl : '',
+    firstName: profile ? profile.firstName : '',
+    lastName: profile ? profile.lastName : '',
+    email: profile ? profile.email : '',
   });
 
   const [formErrors, setFormErrors] = useState({
@@ -57,6 +59,11 @@ const CreateProfile = ({ formType, setProfile }) => {
         setProfile(profile);
       });
     } else if (formType === 'edit') {
+      const data = { ...formData, _id: profile._id };
+      profileService.editProfile(data, token).then(({ profile }) => {
+        setProfile(profile);
+      });
+      history.push('/profile');
     }
   };
 
@@ -137,4 +144,4 @@ const CreateProfile = ({ formType, setProfile }) => {
   );
 };
 
-export default CreateProfile;
+export default ProfileForm;

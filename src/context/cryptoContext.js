@@ -5,5 +5,6 @@ const initialData = {
 };
 
 const cryptoContext = createContext(initialData);
+cryptoContext.displayName = 'CryptoContext';
 
 export default cryptoContext;

@@ -44,14 +44,12 @@ The application allows authenticated users to monitor the current value of their
 ### TODO
 
 - handle error - server
-- handle error/ notifications - client, common error handler
+- handle error/ notifications - client, common error handler; register user exists
 - deploy client to Firebase, deploy server to Heroku (update fronent services)
 - coin detail page more data and styling
+- portfolio 7 days chart
 - test
 
 ### Whishlist
 
-- Purchase coin with Stripe
 - add animations - [motion](https://www.framer.com/motion/)
-
-**Note example: `marked`, ... !**

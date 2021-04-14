@@ -1,0 +1,58 @@
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.avatarHeading {
+  text-align: center;
+  font-weight: normal;
+}
+
+.infoWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  margin: 1.5em 0;
+}
+
+.infoLabel {
+  background-color: #fbe300;
+  padding: 0.5em 1em;
+}
+
+.infoData {
+  padding: 0.5em 1em;
+}
+
+.editLinkWrapper {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.editLink {
+  display: block;
+  width: 60%;
+  color: white;
+  background-color: #27be94;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+  border: none;
+}
+
+.editLink:hover {
+  background-color: #58e7bd;
+}

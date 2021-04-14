@@ -19,7 +19,7 @@ select {
   background-position: 95% 60%;
   font-size: 0.9em;
   color: #9da3a8;
-  background: url(../../assets/icons/downArrow.svg) no-repeat #eff0f1;
+  background: url(../../../assets/icons/downArrow.svg) no-repeat #eff0f1;
   background-size: 15px;
   background-position: 97.5% 50%;
 }

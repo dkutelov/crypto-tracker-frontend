@@ -1,8 +1,12 @@
+import Layout from '../../components/Layout/Layout';
+
 const EditProfile = () => {
   return (
-    <div>
-      <h1>EditProfile</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>EditProfile</h1>
+      </div>
+    </Layout>
   );
 };
 

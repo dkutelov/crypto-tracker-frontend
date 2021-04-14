@@ -65,8 +65,8 @@ const App = () => {
         <Switch>
           <Route path='/auth/login' component={Login} />
           <Route path='/auth/register' component={Register} />
-          <Route path='/profile' component={Profile} />
-          <Route path='/profile/edit' component={EditProfile} />
+          <Route path='/profile' exact component={Profile} />
+          <Route path='/profile/edit/:id' component={EditProfile} />
           <CryptoContext.Provider value={cryptoData}>
             <Route
               path='/'

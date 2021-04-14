@@ -47,8 +47,8 @@ const LoginPage = ({ touched, errors }) => {
 const LoginFormik = withFormik({
   mapPropsToValues: (props) => {
     return {
-      username: props.username || '',
-      password: props.password || '',
+      username: props.username || 'dario',
+      password: props.password || 'KK12asd&',
       history: props.history,
       dispatch: props.dispatch,
     };

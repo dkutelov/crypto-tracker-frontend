@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import PhotoUpload from '../PhotoUpload/PhotoUpload';
-import UserContext from '../../context/userContext';
-import * as profileService from '../../services/profileService';
+import PhotoUpload from '../../PhotoUpload/PhotoUpload';
+import UserContext from '../../../context/userContext';
+import * as profileService from '../../../services/profileService';
 
-import styles from './profileForm.module.css';
+import styles from './ProfileForm.module.css';
 import './ProfileForm.css';
 
 const CreateProfile = ({ formType, setProfile }) => {

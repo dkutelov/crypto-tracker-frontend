@@ -29,6 +29,7 @@ The application allows authenticated users to monitor the current value of their
 - react-dropzone for image upload
 - react-cropper for avatar cropping
 - firebase storage - image upload for avatar
+- react stripe checkout for payment via Stripe
 
 ### `External API`
 
@@ -47,7 +48,6 @@ The application allows authenticated users to monitor the current value of their
 - handle error/ notifications - client, common error handler; register user exists
 - deploy client to Firebase, deploy server to Heroku (update fronent services)
 - coin detail page more data and styling
-- portfolio 7 days chart
 - test
 
 ### Whishlist

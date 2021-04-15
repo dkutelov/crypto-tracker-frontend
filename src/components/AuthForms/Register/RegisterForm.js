@@ -61,6 +61,7 @@ const RegisterFormik = withFormik({
       rePassword: props.rePassword || '',
       history: props.history,
       dispatch: props.dispatch,
+      setSubmitError: props.setSubmitError,
     };
   },
   validationSchema: Yup.object().shape({
@@ -86,16 +87,15 @@ const RegisterFormik = withFormik({
     }),
   }),
   handleSubmit: (values) => {
-    const { username, password, history, dispatch } = values;
+    const { username, password, history, dispatch, setSubmitError } = values;
     authService
       .register(username, password)
       .then((user) => {
-        console.log('user', user);
         dispatch({ type: 'LOGIN_USER', payload: { user } });
         history.push('/');
       })
       .catch((err) => {
-        console.log('err', err.message);
+        setSubmitError(err.message);
       });
   },
 })(RegisterPage);

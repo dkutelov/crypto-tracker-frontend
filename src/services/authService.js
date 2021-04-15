@@ -1,9 +1,9 @@
-const baseURL = 'http://localhost:4000/api/auth/';
+const baseURL = 'http://localhost:4000/api/auth';
 
-function handleErrors(response) {
+async function handleErrors(response) {
   if (!response.ok) {
-    console.log('handleErrors', response);
-    throw Error(response.statusText);
+    const error = await response.json();
+    throw new Error(error.message);
   }
   return response.json();
 }

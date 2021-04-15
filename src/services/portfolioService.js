@@ -1,4 +1,6 @@
-const baseURL = 'http://localhost:4000/api/portfolios';
+import { config } from '../config/config';
+
+const baseURL = `${config.apiUrl}/portfolios`;
 
 async function handleErrors(response) {
   if (!response.ok) {

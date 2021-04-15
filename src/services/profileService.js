@@ -1,4 +1,7 @@
-const baseURL = 'http://localhost:4000/api/profiles';
+import { config } from '../config/config';
+
+const baseURL = `${config.apiUrl}/profiles`;
+//const baseURL = 'http://localhost:4000/api/profiles';
 
 async function handleErrors(response) {
   if (!response.ok) {

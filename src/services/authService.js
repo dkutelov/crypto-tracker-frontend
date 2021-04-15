@@ -1,4 +1,6 @@
-const baseURL = 'http://localhost:4000/api/auth';
+import { config } from '../config/config';
+
+const baseURL = `${config.apiUrl}/auth`;
 
 async function handleErrors(response) {
   if (!response.ok) {

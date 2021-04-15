@@ -50,13 +50,5 @@ The application creates and manages a central state for:
 - for backend code check this link:
   [Link to backend repo](https://github.com/dkutelov/crypto-tracker-backend)
 
-- backend is deployed on:
-  [Link to backend repo](https://blooming-basin-18460.herokuapp.com/api)
-
-**Notes**
-
-### TODO
-
-- deploy client to Firebase
-- coin detail page more data and styling
-- test
+- backend is deployed on Heroku:
+  [https://blooming-basin-18460.herokuapp.com/api](https://blooming-basin-18460.herokuapp.com/api)

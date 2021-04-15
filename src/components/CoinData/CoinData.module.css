@@ -2,8 +2,39 @@
   width: 80%;
   margin: 0 auto;
   max-width: 1400px;
+  padding-top: 3em;
+  margin-bottom: 3em;
 }
 
 .contentBlock {
   margin-bottom: 2em;
+}
+
+.movingContentWrapper {
+  position: relative;
+  background-color: #fbe300;
+  height: 3em;
+  margin-top: 3em;
+}
+.movingContent {
+  font-family: 'DS-Digital';
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 5px;
+  left: 120%;
+  animation: scroll 15s infinite linear;
+  width: 130%;
+  font-size: 2em;
+  margin: 0;
+  color: #424242;
+}
+
+@keyframes scroll {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
 }

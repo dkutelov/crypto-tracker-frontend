@@ -16,6 +16,20 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('./assets/fonts/DS-Digital-Bold.eot');
+  src: url('./assets/fonts/DS-Digital-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/DS-Digital-Bold.woff2') format('woff2'),
+    url('./assets/fonts/DS-Digital-Bold.woff') format('woff'),
+    url('./assets/fonts/DS-Digital-Bold.ttf') format('truetype'),
+    url('./assets/fonts/DS-Digital-Bold.svg#DS-Digital-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

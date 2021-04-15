@@ -8,7 +8,7 @@ const Footer = () => {
         padding: '1.5em 0',
       }}
     >
-      CryptoHelper&#169; 2021
+      Crypterio&#169; 2021
     </div>
   );
 };

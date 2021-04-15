@@ -29,19 +29,22 @@ const Deletetransaction = ({ match }) => {
   );
 
   const handleDelete = () => {
-    portfolioService.deleteTransaction(transactionId, token).then(({ id }) => {
-      history.push('/transactions');
-      portfolioDispatch({
-        type: 'DELETE_TRANSACTION',
-        payload: { id },
-      }).catch((err) => {
+    portfolioService
+      .deleteTransaction(transactionId, token)
+      .then(({ id }) => {
+        history.push('/transactions');
+        portfolioDispatch({
+          type: 'DELETE_TRANSACTION',
+          payload: { id },
+        });
+      })
+      .catch((err) => {
         console.log('err', err);
         errorDispatch({
           type: 'SET_ERROR_MESSAGE',
           payload: 'Delete unsuccessful! Try Again!',
         });
       });
-    });
   };
   return (
     <Layout>

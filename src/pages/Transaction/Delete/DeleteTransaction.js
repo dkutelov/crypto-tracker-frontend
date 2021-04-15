@@ -7,6 +7,7 @@ import isAuth from '../../../hoc/isAuth';
 
 import UserContext from '../../../context/userContext';
 import PortfolioContext from '../../../context/portfolioContext';
+import ErrorContext from '../../../context/errorContext';
 
 import * as portfolioService from '../../../services/portfolioService';
 import styles from '../Transaction.module.css';
@@ -20,7 +21,9 @@ const Deletetransaction = ({ match }) => {
     },
   } = useContext(UserContext);
   const { portfolioState, portfolioDispatch } = useContext(PortfolioContext);
+  const { _, errorDispatch } = useContext(ErrorContext);
   const history = useHistory();
+
   const transaction = portfolioState.transactions.find(
     (x) => x._id === transactionId
   );
@@ -31,6 +34,12 @@ const Deletetransaction = ({ match }) => {
       portfolioDispatch({
         type: 'DELETE_TRANSACTION',
         payload: { id },
+      }).catch((err) => {
+        console.log('err', err);
+        errorDispatch({
+          type: 'SET_ERROR_MESSAGE',
+          payload: 'Delete unsuccessful! Try Again!',
+        });
       });
     });
   };

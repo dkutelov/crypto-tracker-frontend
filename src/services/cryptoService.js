@@ -1,10 +1,11 @@
 const baseURL = 'https://api.coingecko.com/api/v3';
-const pageSize = 250;
+const pageSize = 50;
 const currency = 'usd';
 
-function handleErrors(response) {
+async function handleErrors(response) {
   if (!response.ok) {
-    throw Error(response.statusText);
+    const error = await response.json();
+    throw new Error(error.message);
   }
   return response.json();
 }

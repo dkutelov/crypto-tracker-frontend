@@ -9,7 +9,7 @@ import styles from './TransactionForm.module.css';
 import './TransactionForm.css';
 import UserContext from '../../context/userContext';
 
-const TransactionForm = ({ formType, cryptoOptions, id }) => {
+const TransactionForm = ({ formType, cryptoOptions, id, setError }) => {
   const {
     state: {
       user: { token },
@@ -64,6 +64,9 @@ const TransactionForm = ({ formType, cryptoOptions, id }) => {
             payload: { transaction: createdTransaction },
           });
           history.push('/transactions');
+        })
+        .catch((err) => {
+          setError({ type: 'SET_ERROR_MESSAGE', payload: err.message });
         });
     } else if (formType === 'edit') {
       portfolioService
@@ -82,6 +85,9 @@ const TransactionForm = ({ formType, cryptoOptions, id }) => {
             payload: { transaction: updatedTransaction },
           });
           history.push('/transactions');
+        })
+        .catch((err) => {
+          setError({ type: 'SET_ERROR_MESSAGE', payload: err.message });
         });
     }
   };

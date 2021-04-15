@@ -13,7 +13,7 @@ const Error = ({
     setShow(true);
     const timeOut = setTimeout(() => {
       setShow(false);
-      setError('');
+      setError({ type: 'RESET_ERROR_MESSAGE' });
     }, 2000);
     return () => {
       clearTimeout(timeOut);

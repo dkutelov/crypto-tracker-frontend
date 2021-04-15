@@ -33,11 +33,15 @@ const CryptoList = ({ searchTerm }) => {
           </tr>
         </thead>
         <tbody>
-          {cryptoData.map((crypto) => (
-            <CryptoItem key={crypto.id} {...crypto} />
-          ))}
+          {cryptoData.length > 0 &&
+            cryptoData.map((crypto) => (
+              <CryptoItem key={crypto.id} {...crypto} />
+            ))}
         </tbody>
       </table>
+      {cryptoData.length === 0 && (
+        <div style={{ textAlign: 'center', marginTop: '2em' }}>No data</div>
+      )}
     </div>
   );
 };

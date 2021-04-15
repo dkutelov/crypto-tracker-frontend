@@ -9,7 +9,8 @@ import {
 } from 'recharts';
 
 const PortfolioChart = ({ data }) => {
-  const coins = Object.keys(data[0]).slice(1);
+  console.log(data);
+  const coins = data.length > 0 ? Object.keys(data[0]).slice(1) : [];
   const colors = ['#8884d8', '#82ca9d', '#fbe300', '#ff6ec7', '#9bedff'];
   console.log(coins);
   return (

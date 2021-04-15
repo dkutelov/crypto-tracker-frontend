@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import PhotoUpload from '../../PhotoUpload/PhotoUpload';
 import UserContext from '../../../context/userContext';
+import ErrorContext from '../../../context/errorContext';
 import * as profileService from '../../../services/profileService';
 
 import styles from './ProfileForm.module.css';
@@ -14,6 +15,7 @@ const ProfileForm = ({ formType, setProfile, profile }) => {
       user: { token },
     },
   } = useContext(UserContext);
+  const { _, errorDispatch } = useContext(ErrorContext);
   const [uploadAvatar, setUploadAvatar] = useState(
     formType === 'create' ? true : false
   );
@@ -56,13 +58,26 @@ const ProfileForm = ({ formType, setProfile, profile }) => {
 
     if (formType === 'create') {
       profileService.createProfile(formData, token).then(({ profile }) => {
-        setProfile(profile);
+        setProfile(profile).catch((err) => {
+          errorDispatch({
+            type: 'SET_ERROR_MESSAGE',
+            payload: err.message,
+          });
+        });
       });
     } else if (formType === 'edit') {
       const data = { ...formData, _id: profile._id };
-      profileService.editProfile(data, token).then(({ profile }) => {
-        setProfile(profile);
-      });
+      profileService
+        .editProfile(data, token)
+        .then(({ profile }) => {
+          setProfile(profile);
+        })
+        .catch((err) => {
+          errorDispatch({
+            type: 'SET_ERROR_MESSAGE',
+            payload: err.message,
+          });
+        });
       history.push('/profile');
     }
   };

@@ -51,6 +51,7 @@ const LoginFormik = withFormik({
       password: props.password || 'KK12asd&',
       history: props.history,
       dispatch: props.dispatch,
+      setError: props.setError,
     };
   },
   validationSchema: Yup.object().shape({
@@ -69,12 +70,16 @@ const LoginFormik = withFormik({
       .required('Password is required'),
   }),
   handleSubmit: (values) => {
-    const { username, password, history, dispatch } = values;
-    authService.login(username, password).then((user) => {
-      console.log(user);
-      dispatch({ type: 'LOGIN_USER', payload: { user } });
-      history.push('/');
-    });
+    const { username, password, history, dispatch, setError } = values;
+    authService
+      .login(username, password)
+      .then((user) => {
+        dispatch({ type: 'LOGIN_USER', payload: { user } });
+        history.push('/');
+      })
+      .catch((err) => {
+        setError({ type: 'SET_ERROR_MESSAGE', payload: err.message });
+      });
   },
 })(LoginPage);
 

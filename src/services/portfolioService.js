@@ -1,8 +1,9 @@
 const baseURL = 'http://localhost:4000/api/portfolios';
 
-function handleErrors(response) {
+async function handleErrors(response) {
   if (!response.ok) {
-    throw Error(response.statusText);
+    const error = await response.json();
+    throw new Error(error.message);
   }
   return response.json();
 }

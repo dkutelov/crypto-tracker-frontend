@@ -31,6 +31,15 @@ The application allows authenticated users to monitor the current value of their
 - firebase storage - image upload for avatar
 - react stripe checkout for payment via Stripe
 
+### App state
+
+The application creates and manages a central state for:
+
+- user
+- portfolio
+- error.
+  The state is hold in react context and managed by react reducer.
+
 ### `External API`
 
 - this project uses coingecko.com API for crypto currency market data
@@ -44,12 +53,6 @@ The application allows authenticated users to monitor the current value of their
 
 ### TODO
 
-- handle error - server
-- handle error/ notifications - client, common error handler; register user exists
 - deploy client to Firebase, deploy server to Heroku (update fronent services)
 - coin detail page more data and styling
 - test
-
-### Whishlist
-
-- add animations - [motion](https://www.framer.com/motion/)

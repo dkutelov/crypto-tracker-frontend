@@ -14,13 +14,17 @@ import Profile from './pages/Profile/Profile';
 import EditProfile from './pages/Profile/EditProfile';
 import BuyCoin from './pages/BuyCoin/BuyCoin';
 import NotFoundPage from './pages/NotFoundPage';
+import Error from './components/Error/Error';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 import UserContext from './context/userContext';
 import CryptoContext from './context/cryptoContext';
 import PortfolioContext from './context/portfolioContext';
+import ErrorContext from './context/errorContext';
 
 import userReducer from './reducers/user.reducer';
 import portfolioReducer from './reducers/portfolio.reducer';
+import errorReducer from './reducers/error.reducer';
 
 import * as cryptoService from './services/cryptoService';
 import * as portfolioService from './services/portfolioService';
@@ -33,12 +37,14 @@ const App = () => {
 
   const initialUser = useContext(UserContext);
   const initialPortfolio = useContext(PortfolioContext);
+  const initialError = useContext(ErrorContext);
 
   const [state, dispatch] = useReducer(userReducer, initialUser);
   const [portfolioState, portfolioDispatch] = useReducer(
     portfolioReducer,
     initialPortfolio
   );
+  const [errorState, errorDispatch] = useReducer(errorReducer, initialError);
 
   useEffect(() => {
     setLoading(true);
@@ -49,76 +55,109 @@ const App = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        setLoading(false);
+        errorDispatch({
+          type: 'SET_ERROR_MESSAGE',
+          payload: 'Something went wrong! Try again!',
+        });
       });
   }, []);
 
   useEffect(() => {
     if (state.user) {
-      portfolioService.getOne(state.user?.token).then((portfolio) => {
-        portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
-      });
+      portfolioService
+        .getOne(state.user?.token)
+        .then((portfolio) => {
+          portfolioDispatch({ type: 'SET_PORTFOLIO', payload: portfolio });
+        })
+        .catch((err) => {
+          setLoading(false);
+          errorDispatch({
+            type: 'SET_ERROR_MESSAGE',
+            payload: 'Something went wrong! Try again!',
+          });
+        });
     }
   }, [state.user]);
 
   useEffect(() => {
     if (state.user) {
-      profileService.getProfile(state.user?.token).then((profile) => {
-        setProfile(profile);
-      });
+      profileService
+        .getProfile(state.user?.token)
+        .then((profile) => {
+          setProfile(profile);
+        })
+        .catch((err) => {
+          setLoading(false);
+          errorDispatch({
+            type: 'SET_ERROR_MESSAGE',
+            payload: 'Something went wrong! Try again!',
+          });
+        });
     }
   }, [state.user]);
 
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-      <Router>
-        <Switch>
-          <Route path='/auth/login' component={Login} />
-          <Route path='/auth/register' component={Register} />
-          <Route
-            path='/profile'
-            exact
-            render={(props) => (
-              <Profile {...props} profile={profile} setProfile={setProfile} />
-            )}
-          />
-          <Route
-            path='/profile/edit'
-            render={(props) => (
-              <EditProfile
-                {...props}
-                profile={profile}
-                setProfile={setProfile}
-              />
-            )}
-          />
-          <CryptoContext.Provider value={cryptoData}>
-            <Route
-              path='/'
-              exact
-              render={() => <Homepage loading={loading} />}
-            />
-            <Route path='/coins/:name' component={CoinDetail} />
-            <PortfolioContext.Provider
-              value={{ portfolioState, portfolioDispatch }}
-            >
-              <Route path='/portfolio' component={Portfolio} />
-              <Route path='/buy' component={BuyCoin} />
-              <Route path='/transactions' exact component={Transactions} />
-              <Route path='/transactions/add' component={AddTransaction} />
+      <ErrorContext.Provider value={{ errorState, errorDispatch }}>
+        {errorState && errorState.message && (
+          <Error message={errorState.message} setError={errorDispatch} />
+        )}
+        <ErrorBoundary>
+          <Router>
+            <Switch>
+              <Route path='/auth/login' component={Login} />
+              <Route path='/auth/register' component={Register} />
               <Route
-                path='/transactions/:id/delete'
-                component={DeleteTransaction}
+                path='/profile'
+                exact
+                render={(props) => (
+                  <Profile
+                    {...props}
+                    profile={profile}
+                    setProfile={setProfile}
+                  />
+                )}
               />
               <Route
-                path='/transactions/:id/edit'
-                component={EditTransaction}
+                path='/profile/edit'
+                render={(props) => (
+                  <EditProfile
+                    {...props}
+                    profile={profile}
+                    setProfile={setProfile}
+                  />
+                )}
               />
-            </PortfolioContext.Provider>
-          </CryptoContext.Provider>
-          <Route path='*' component={NotFoundPage} />
-        </Switch>
-      </Router>
+              <CryptoContext.Provider value={cryptoData}>
+                <Route
+                  path='/'
+                  exact
+                  render={() => <Homepage loading={loading} />}
+                />
+                <Route path='/coins/:name' component={CoinDetail} />
+                <PortfolioContext.Provider
+                  value={{ portfolioState, portfolioDispatch }}
+                >
+                  <Route path='/portfolio' component={Portfolio} />
+                  <Route path='/buy' component={BuyCoin} />
+                  <Route path='/transactions' exact component={Transactions} />
+                  <Route path='/transactions/add' component={AddTransaction} />
+                  <Route
+                    path='/transactions/:id/delete'
+                    component={DeleteTransaction}
+                  />
+                  <Route
+                    path='/transactions/:id/edit'
+                    component={EditTransaction}
+                  />
+                </PortfolioContext.Provider>
+              </CryptoContext.Provider>
+              <Route path='*' component={NotFoundPage} />
+            </Switch>
+          </Router>
+        </ErrorBoundary>
+      </ErrorContext.Provider>
     </UserContext.Provider>
   );
 };

@@ -4,6 +4,7 @@ import PhotoDropzone from './PhotoDropzone';
 import cuid from 'cuid';
 
 import UserContext from '../../context/userContext';
+import ErrorContext from '../../context/errorContext';
 import { getFileExtension } from '../../utils/getFileExtention';
 import * as firbaseService from '../../services/firebaseService';
 import styles from './PhotoUpload.module.css';
@@ -21,6 +22,8 @@ const PhotoUpload = ({ handleAddAvatar }) => {
     setImage(null);
   };
 
+  const { _, errorDispatch } = useContext(ErrorContext);
+
   const uploadImage = () => {
     setLoading(true);
     const fileName = `${cuid()}.${getFileExtension(files[0].name)}`;
@@ -37,6 +40,10 @@ const PhotoUpload = ({ handleAddAvatar }) => {
         console.log('Upload is ' + progress + '%');
       },
       (error) => {
+        errorDispatch({
+          type: 'SET_ERROR_MESSAGE',
+          payload: 'Image upload unsuccessful! Try Again!',
+        });
         console.log(error);
       },
       () => {

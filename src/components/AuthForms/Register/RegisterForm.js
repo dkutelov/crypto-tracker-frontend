@@ -74,7 +74,7 @@ const RegisterFormik = withFormik({
       ),
     password: Yup.string()
       .matches(
-        /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/,
+        /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/,
         'Password should be min 8 letters, 2 capital letters, one special char, 2 numbers, 3 small letters!'
       )
       .required('Password is required'),

@@ -31,7 +31,7 @@ const Navbar = () => {
               <>
                 <li className={styles.linkWrapper}>
                   <NavLink to='/portfolio' className={styles.navLink}>
-                    Portfio
+                    Portfolio
                   </NavLink>
                 </li>
                 <li className={styles.linkWrapper}>

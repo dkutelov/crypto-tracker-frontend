@@ -57,14 +57,17 @@ const ProfileForm = ({ formType, setProfile, profile }) => {
     }
 
     if (formType === 'create') {
-      profileService.createProfile(formData, token).then(({ profile }) => {
-        setProfile(profile).catch((err) => {
+      profileService
+        .createProfile(formData, token)
+        .then(({ profile }) => {
+          setProfile(profile);
+        })
+        .catch((err) => {
           errorDispatch({
             type: 'SET_ERROR_MESSAGE',
             payload: err.message,
           });
         });
-      });
     } else if (formType === 'edit') {
       const data = { ...formData, _id: profile._id };
       profileService

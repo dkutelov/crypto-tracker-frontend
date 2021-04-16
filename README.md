@@ -42,6 +42,11 @@ The application creates and manages a central state for:
 
 The state is hold in react context and managed by react reducer.
 
+### App demo
+
+- the app is deployed to Firebase hosting
+  [https://crypterio-310511.web.app/](https://crypterio-310511.web.app/)
+
 ### `External API`
 
 - this project uses coingecko.com API for crypto currency market data

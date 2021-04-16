@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Profile Component Should match snapshot 1`] = `
+<div>
+  <div
+    className="avatarWrapper"
+  >
+    <h3
+      className="avatarHeading"
+    >
+      Avatar
+    </h3>
+    <img
+      alt="my avatar"
+      className="avatar"
+      src="https://www.test.com/avatar.jpg"
+    />
+  </div>
+  <div
+    className="infoWrapper"
+  >
+    <p
+      className="infoLabel"
+    >
+      First Name
+    </p>
+    <p
+      className="infoData"
+    >
+      John
+    </p>
+    <p
+      className="infoLabel"
+    >
+      Last Name
+    </p>
+    <p
+      className="infoData"
+    >
+      Doe
+    </p>
+    <p
+      className="infoLabel"
+    >
+      Email
+    </p>
+    <p
+      className="infoData"
+    >
+      text@test.com
+    </p>
+    <div
+      className="editLinkWrapper"
+    >
+      <a
+        className="editLink"
+        href="/profile/edit"
+        onClick={[Function]}
+      >
+        Edit
+      </a>
+    </div>
+  </div>
+</div>
+`;

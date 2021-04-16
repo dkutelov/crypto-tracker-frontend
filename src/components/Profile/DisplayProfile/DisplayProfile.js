@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './DisplayProfile.module.css';
 
 const DisplayProfile = ({ profile }) => {
-  const { _id, avatarUrl, email, firstName, lastName } = profile;
+  const { avatarUrl, email, firstName, lastName } = profile;
   return (
     <div>
       <div className={styles.avatarWrapper}>

@@ -1,0 +1,1507 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinData Component Should match snapshot 1`] = `
+Array [
+  <div
+    className="movingContentWrapper"
+  >
+    <p
+      className="movingContent"
+    >
+      Current price $
+      123
+       ✦ Price Change 24h
+       
+      1.23
+      % ✦ Hishest price 24h $
+      125
+       ✦ Lowest price 24h $
+      121
+    </p>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <img
+        alt="bitcoin"
+      />
+      <h2>
+        bitcoin
+      </h2>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
+      >
+        <div
+          className="recharts-wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "cursor": "default",
+              "display": "inline:block",
+              "height": 500,
+              "position": "relative",
+              "width": 950,
+            }
+          }
+        >
+          <svg
+            className="recharts-surface"
+            height={500}
+            version="1.1"
+            viewBox="0 0 950 500"
+            width={950}
+          >
+            <defs>
+              <clipPath
+                id="recharts8-clip"
+              >
+                <rect
+                  height={460}
+                  width={860}
+                  x={60}
+                  y={10}
+                />
+              </clipPath>
+            </defs>
+            <defs>
+              <linearGradient
+                id="colorAve"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="1"
+              >
+                <stop
+                  offset="5%"
+                  stopColor="#9427be"
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="#9427be"
+                  stopOpacity={0}
+                />
+              </linearGradient>
+              <linearGradient
+                id="colorMax"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="1"
+              >
+                <stop
+                  offset="5%"
+                  stopColor="#27be94"
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="#27be94"
+                  stopOpacity={0}
+                />
+              </linearGradient>
+              <linearGradient
+                id="colorMin"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="1"
+              >
+                <stop
+                  offset="5%"
+                  stopColor="#fbe300"
+                  stopOpacity={1}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="#fbe300"
+                  stopOpacity={0.5}
+                />
+              </linearGradient>
+            </defs>
+            <g
+              className="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"
+            >
+              <line
+                className="recharts-cartesian-axis-line"
+                fill="none"
+                height={30}
+                orientation="bottom"
+                stroke="#666"
+                type="category"
+                width={860}
+                x={60}
+                x1={60}
+                x2={920}
+                y={470}
+                y1={470}
+                y2={470}
+              />
+              <g
+                className="recharts-cartesian-axis-ticks"
+              >
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={60}
+                    x2={60}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={60}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={60}
+                    >
+                      09-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={203.33333333333334}
+                    x2={203.33333333333334}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={203.33333333333334}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={203.33333333333334}
+                    >
+                      10-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={346.6666666666667}
+                    x2={346.6666666666667}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={346.6666666666667}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={346.6666666666667}
+                    >
+                      11-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={490}
+                    x2={490}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={490}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={490}
+                    >
+                      12-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={633.3333333333334}
+                    x2={633.3333333333334}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={633.3333333333334}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={633.3333333333334}
+                    >
+                      13-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={776.6666666666667}
+                    x2={776.6666666666667}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={776.6666666666667}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={776.6666666666667}
+                    >
+                      14-04-2021
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={30}
+                    orientation="bottom"
+                    stroke="#666"
+                    type="category"
+                    width={860}
+                    x={60}
+                    x1={920}
+                    x2={920}
+                    y={470}
+                    y1={476}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={30}
+                    orientation="bottom"
+                    stroke="none"
+                    textAnchor="middle"
+                    type="category"
+                    width={860}
+                    x={920}
+                    y={478}
+                  >
+                    <tspan
+                      dy="0.71em"
+                      x={920}
+                    >
+                      15-04-2021
+                    </tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
+            >
+              <line
+                className="recharts-cartesian-axis-line"
+                fill="none"
+                height={460}
+                orientation="left"
+                stroke="#666"
+                type="number"
+                width={60}
+                x={0}
+                x1={60}
+                x2={60}
+                y={10}
+                y1={10}
+                y2={470}
+              />
+              <g
+                className="recharts-cartesian-axis-ticks"
+              >
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={460}
+                    orientation="left"
+                    stroke="#666"
+                    type="number"
+                    width={60}
+                    x={0}
+                    x1={54}
+                    x2={60}
+                    y={10}
+                    y1={470}
+                    y2={470}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={460}
+                    orientation="left"
+                    stroke="none"
+                    textAnchor="end"
+                    type="number"
+                    width={60}
+                    x={52}
+                    y={470}
+                  >
+                    <tspan
+                      dy="0.355em"
+                      x={52}
+                    >
+                      0
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={460}
+                    orientation="left"
+                    stroke="#666"
+                    type="number"
+                    width={60}
+                    x={0}
+                    x1={54}
+                    x2={60}
+                    y={10}
+                    y1={355}
+                    y2={355}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={460}
+                    orientation="left"
+                    stroke="none"
+                    textAnchor="end"
+                    type="number"
+                    width={60}
+                    x={52}
+                    y={355}
+                  >
+                    <tspan
+                      dy="0.355em"
+                      x={52}
+                    >
+                      20000
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={460}
+                    orientation="left"
+                    stroke="#666"
+                    type="number"
+                    width={60}
+                    x={0}
+                    x1={54}
+                    x2={60}
+                    y={10}
+                    y1={240}
+                    y2={240}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={460}
+                    orientation="left"
+                    stroke="none"
+                    textAnchor="end"
+                    type="number"
+                    width={60}
+                    x={52}
+                    y={240}
+                  >
+                    <tspan
+                      dy="0.355em"
+                      x={52}
+                    >
+                      40000
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={460}
+                    orientation="left"
+                    stroke="#666"
+                    type="number"
+                    width={60}
+                    x={0}
+                    x1={54}
+                    x2={60}
+                    y={10}
+                    y1={125}
+                    y2={125}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={460}
+                    orientation="left"
+                    stroke="none"
+                    textAnchor="end"
+                    type="number"
+                    width={60}
+                    x={52}
+                    y={125}
+                  >
+                    <tspan
+                      dy="0.355em"
+                      x={52}
+                    >
+                      60000
+                    </tspan>
+                  </text>
+                </g>
+                <g
+                  className="recharts-layer recharts-cartesian-axis-tick"
+                >
+                  <line
+                    className="recharts-cartesian-axis-tick-line"
+                    fill="none"
+                    height={460}
+                    orientation="left"
+                    stroke="#666"
+                    type="number"
+                    width={60}
+                    x={0}
+                    x1={54}
+                    x2={60}
+                    y={10}
+                    y1={10}
+                    y2={10}
+                  />
+                  <text
+                    className="recharts-text recharts-cartesian-axis-tick-value"
+                    fill="#666"
+                    height={460}
+                    orientation="left"
+                    stroke="none"
+                    textAnchor="end"
+                    type="number"
+                    width={60}
+                    x={52}
+                    y={10}
+                  >
+                    <tspan
+                      dy="0.355em"
+                      x={52}
+                    >
+                      80000
+                    </tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+            <g
+              className="recharts-layer recharts-area"
+            >
+              <g
+                className="recharts-layer"
+              >
+                <defs>
+                  <clipPath
+                    id="animationClipPath-recharts-area-12"
+                  >
+                    <rect
+                      height={471}
+                      width={0}
+                      x={60}
+                      y={0}
+                    />
+                  </clipPath>
+                </defs>
+                <g
+                  className="recharts-layer"
+                  clipPath="url(#animationClipPath-recharts-area-12)"
+                >
+                  <g
+                    className="recharts-layer"
+                    clipPath={null}
+                  >
+                    <path
+                      className="recharts-curve recharts-area-area"
+                      d="M60,133.50815999999998C107.77777777777777,126.76490499999997,155.55555555555557,120.02164999999997,203.33333333333334,120.02164999999997C251.11111111111111,120.02164999999997,298.8888888888889,121.83002499999999,346.6666666666667,121.83002499999999C394.44444444444446,121.83002499999999,442.22222222222223,121.40268499999999,490,120.548005C537.7777777777778,119.69332500000002,585.5555555555555,111.84790041666665,633.3333333333334,108.18636749999997C681.1111111111112,104.5248345833333,728.8888888888889,98.57880749999998,776.6666666666667,98.57880749999998C824.4444444444445,98.57880749999998,872.2222222222223,98.86478375,920,99.15076000000002L920,470C872.2222222222223,470,824.4444444444445,470,776.6666666666667,470C728.8888888888889,470,681.1111111111112,470,633.3333333333334,470C585.5555555555555,470,537.7777777777778,470,490,470C442.22222222222223,470,394.44444444444446,470,346.6666666666667,470C298.8888888888889,470,251.11111111111111,470,203.33333333333334,470C155.55555555555557,470,107.77777777777777,470,60,470Z"
+                      fill="url(#colorMax)"
+                      fillOpacity={0.8}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58520.32",
+                            ],
+                            "x": 60,
+                            "y": 133.50815999999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60865.80",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 120.02164999999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60551.30",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 121.83002499999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60774.26",
+                            ],
+                            "x": 490,
+                            "y": 120.548005,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62924.11",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 108.18636749999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "64594.99",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 98.57880749999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "64495.52",
+                            ],
+                            "x": 920,
+                            "y": 99.15076000000002,
+                          },
+                        ]
+                      }
+                      stroke="none"
+                      type="monotone"
+                      width={860}
+                    />
+                    <path
+                      className="recharts-curve recharts-area-curve"
+                      d="M60,133.50815999999998C107.77777777777777,126.76490499999997,155.55555555555557,120.02164999999997,203.33333333333334,120.02164999999997C251.11111111111111,120.02164999999997,298.8888888888889,121.83002499999999,346.6666666666667,121.83002499999999C394.44444444444446,121.83002499999999,442.22222222222223,121.40268499999999,490,120.548005C537.7777777777778,119.69332500000002,585.5555555555555,111.84790041666665,633.3333333333334,108.18636749999997C681.1111111111112,104.5248345833333,728.8888888888889,98.57880749999998,776.6666666666667,98.57880749999998C824.4444444444445,98.57880749999998,872.2222222222223,98.86478375,920,99.15076000000002"
+                      fill="none"
+                      fillOpacity={0.8}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58520.32",
+                            ],
+                            "x": 60,
+                            "y": 133.50815999999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60865.80",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 120.02164999999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60551.30",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 121.83002499999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60774.26",
+                            ],
+                            "x": 490,
+                            "y": 120.548005,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62924.11",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 108.18636749999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "64594.99",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 98.57880749999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "64495.52",
+                            ],
+                            "x": 920,
+                            "y": 99.15076000000002,
+                          },
+                        ]
+                      }
+                      stroke="#27be94"
+                      type="monotone"
+                      width={860}
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g
+              className="recharts-layer recharts-area"
+            >
+              <g
+                className="recharts-layer"
+              >
+                <defs>
+                  <clipPath
+                    id="animationClipPath-recharts-area-13"
+                  >
+                    <rect
+                      height={471}
+                      width={0}
+                      x={60}
+                      y={0}
+                    />
+                  </clipPath>
+                </defs>
+                <g
+                  className="recharts-layer"
+                  clipPath="url(#animationClipPath-recharts-area-13)"
+                >
+                  <g
+                    className="recharts-layer"
+                    clipPath={null}
+                  >
+                    <path
+                      className="recharts-curve recharts-area-area"
+                      d="M60,137.48463C107.77777777777777,134.97939812500002,155.55555555555557,132.47416625000002,203.33333333333334,130.48141750000002C251.11111111111111,128.48866875000002,298.8888888888889,125.68507416666662,346.6666666666667,125.52813749999997C394.44444444444446,125.37120083333332,442.22222222222223,125.44966916666665,490,125.2927325C537.7777777777778,125.13579583333335,585.5555555555555,124.00310333333334,633.3333333333334,121.42384500000001C681.1111111111112,118.84458666666669,728.8888888888889,104.8514825,776.6666666666667,104.8514825C824.4444444444445,104.8514825,872.2222222222223,106.32972125,920,107.80796L920,470C872.2222222222223,470,824.4444444444445,470,776.6666666666667,470C728.8888888888889,470,681.1111111111112,470,633.3333333333334,470C585.5555555555555,470,537.7777777777778,470,490,470C442.22222222222223,470,394.44444444444446,470,346.6666666666667,470C298.8888888888889,470,251.11111111111111,470,203.33333333333334,470C155.55555555555557,470,107.77777777777777,470,60,470Z"
+                      fill="url(#colorAve)"
+                      fillOpacity={1}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "57828.76",
+                            ],
+                            "x": 60,
+                            "y": 137.48463,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59046.71",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 130.48141750000002,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59908.15",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 125.52813749999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59949.09",
+                            ],
+                            "x": 490,
+                            "y": 125.2927325,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60621.94",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 121.42384500000001,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "63504.09",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 104.8514825,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62989.92",
+                            ],
+                            "x": 920,
+                            "y": 107.80796,
+                          },
+                        ]
+                      }
+                      stroke="none"
+                      type="monotone"
+                      width={860}
+                    />
+                    <path
+                      className="recharts-curve recharts-area-curve"
+                      d="M60,137.48463C107.77777777777777,134.97939812500002,155.55555555555557,132.47416625000002,203.33333333333334,130.48141750000002C251.11111111111111,128.48866875000002,298.8888888888889,125.68507416666662,346.6666666666667,125.52813749999997C394.44444444444446,125.37120083333332,442.22222222222223,125.44966916666665,490,125.2927325C537.7777777777778,125.13579583333335,585.5555555555555,124.00310333333334,633.3333333333334,121.42384500000001C681.1111111111112,118.84458666666669,728.8888888888889,104.8514825,776.6666666666667,104.8514825C824.4444444444445,104.8514825,872.2222222222223,106.32972125,920,107.80796"
+                      fill="none"
+                      fillOpacity={1}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "57828.76",
+                            ],
+                            "x": 60,
+                            "y": 137.48463,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59046.71",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 130.48141750000002,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59908.15",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 125.52813749999997,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59949.09",
+                            ],
+                            "x": 490,
+                            "y": 125.2927325,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "60621.94",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 121.42384500000001,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "63504.09",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 104.8514825,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62989.92",
+                            ],
+                            "x": 920,
+                            "y": 107.80796,
+                          },
+                        ]
+                      }
+                      stroke="#9427be"
+                      type="monotone"
+                      width={860}
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g
+              className="recharts-layer recharts-area"
+            >
+              <g
+                className="recharts-layer"
+              >
+                <defs>
+                  <clipPath
+                    id="animationClipPath-recharts-area-14"
+                  >
+                    <rect
+                      height={471}
+                      width={0}
+                      x={60}
+                      y={0}
+                    />
+                  </clipPath>
+                </defs>
+                <g
+                  className="recharts-layer"
+                  clipPath="url(#animationClipPath-recharts-area-14)"
+                >
+                  <g
+                    className="recharts-layer"
+                    clipPath={null}
+                  >
+                    <path
+                      className="recharts-curve recharts-area-area"
+                      d="M60,145.23183500000002C107.77777777777777,141.72816354166667,155.55555555555557,138.2244920833333,203.33333333333334,136.17012249999996C251.11111111111111,134.11575291666662,298.8888888888889,134.1951220833333,346.6666666666667,132.90561749999998C394.44444444444446,131.61611291666665,442.22222222222223,129.53490041666663,490,128.43309499999995C537.7777777777778,127.33128958333329,585.5555555555555,127.72032499999996,633.3333333333334,126.29478499999999C681.1111111111112,124.86924500000002,728.8888888888889,108.86383249999999,776.6666666666667,108.86383249999999C824.4444444444445,108.86383249999999,872.2222222222223,111.12208749999999,920,113.38034250000001L920,470C872.2222222222223,470,824.4444444444445,470,776.6666666666667,470C728.8888888888889,470,681.1111111111112,470,633.3333333333334,470C585.5555555555555,470,537.7777777777778,470,490,470C442.22222222222223,470,394.44444444444446,470,346.6666666666667,470C298.8888888888889,470,251.11111111111111,470,203.33333333333334,470C155.55555555555557,470,107.77777777777777,470,60,470Z"
+                      fill="url(#colorMin)"
+                      fillOpacity={1}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "56481.42",
+                            ],
+                            "x": 60,
+                            "y": 145.23183500000002,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58057.37",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 136.17012249999996,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58625.11",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 132.90561749999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59402.94",
+                            ],
+                            "x": 490,
+                            "y": 128.43309499999995,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59774.82",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 126.29478499999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62806.29",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 108.86383249999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62020.81",
+                            ],
+                            "x": 920,
+                            "y": 113.38034250000001,
+                          },
+                        ]
+                      }
+                      stroke="none"
+                      type="monotone"
+                      width={860}
+                    />
+                    <path
+                      className="recharts-curve recharts-area-curve"
+                      d="M60,145.23183500000002C107.77777777777777,141.72816354166667,155.55555555555557,138.2244920833333,203.33333333333334,136.17012249999996C251.11111111111111,134.11575291666662,298.8888888888889,134.1951220833333,346.6666666666667,132.90561749999998C394.44444444444446,131.61611291666665,442.22222222222223,129.53490041666663,490,128.43309499999995C537.7777777777778,127.33128958333329,585.5555555555555,127.72032499999996,633.3333333333334,126.29478499999999C681.1111111111112,124.86924500000002,728.8888888888889,108.86383249999999,776.6666666666667,108.86383249999999C824.4444444444445,108.86383249999999,872.2222222222223,111.12208749999999,920,113.38034250000001"
+                      fill="none"
+                      fillOpacity={1}
+                      height={460}
+                      points={
+                        Array [
+                          Object {
+                            "payload": Object {
+                              "avg": "57828.76",
+                              "max": "58520.32",
+                              "min": "56481.42",
+                              "name": "09-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "56481.42",
+                            ],
+                            "x": 60,
+                            "y": 145.23183500000002,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59046.71",
+                              "max": "60865.80",
+                              "min": "58057.37",
+                              "name": "10-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58057.37",
+                            ],
+                            "x": 203.33333333333334,
+                            "y": 136.17012249999996,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59908.15",
+                              "max": "60551.30",
+                              "min": "58625.11",
+                              "name": "11-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "58625.11",
+                            ],
+                            "x": 346.6666666666667,
+                            "y": 132.90561749999998,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "59949.09",
+                              "max": "60774.26",
+                              "min": "59402.94",
+                              "name": "12-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59402.94",
+                            ],
+                            "x": 490,
+                            "y": 128.43309499999995,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "60621.94",
+                              "max": "62924.11",
+                              "min": "59774.82",
+                              "name": "13-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "59774.82",
+                            ],
+                            "x": 633.3333333333334,
+                            "y": 126.29478499999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "63504.09",
+                              "max": "64594.99",
+                              "min": "62806.29",
+                              "name": "14-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62806.29",
+                            ],
+                            "x": 776.6666666666667,
+                            "y": 108.86383249999999,
+                          },
+                          Object {
+                            "payload": Object {
+                              "avg": "62989.92",
+                              "max": "64495.52",
+                              "min": "62020.81",
+                              "name": "15-04-2021",
+                            },
+                            "value": Array [
+                              0,
+                              "62020.81",
+                            ],
+                            "x": 920,
+                            "y": 113.38034250000001,
+                          },
+                        ]
+                      }
+                      stroke="#fbe300"
+                      type="monotone"
+                      width={860}
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div
+            className="recharts-tooltip-wrapper"
+            style={
+              Object {
+                "MozTransform": "translate(undefinedpx, undefinedpx)",
+                "OTransform": "translate(undefinedpx, undefinedpx)",
+                "WebkitTransform": "translate(undefinedpx, undefinedpx)",
+                "left": 0,
+                "msTransform": "translate(undefinedpx, undefinedpx)",
+                "pointerEvents": "none",
+                "position": "absolute",
+                "top": 0,
+                "transform": "translate(undefinedpx, undefinedpx)",
+                "visibility": "hidden",
+              }
+            }
+          >
+            <div
+              className="recharts-default-tooltip"
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "border": "1px solid #ccc",
+                  "margin": 0,
+                  "padding": 10,
+                  "whiteSpace": "nowrap",
+                }
+              }
+            >
+              <p
+                className="recharts-tooltip-label"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="contentBlock"
+    >
+      <h3>
+        Description
+      </h3>
+      <p
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Lorem ipsum dolor sit amet ...",
+          }
+        }
+      />
+    </div>
+    <div
+      className="contentBlock"
+    >
+      <h3>
+        Categories
+      </h3>
+      <p>
+        crypto, coins
+      </p>
+    </div>
+    <div
+      className="contentBlock"
+    >
+      <h3>
+        Market capitalization
+      </h3>
+      <p>
+        USD 
+        121123123
+      </p>
+      <p>
+        Market Capitalization Rank: 
+      </p>
+    </div>
+    <div
+      className="contentBlock"
+    >
+      <h3>
+        Total Volume
+      </h3>
+      <p>
+        USD 
+        121123123
+      </p>
+    </div>
+  </div>,
+]
+`;

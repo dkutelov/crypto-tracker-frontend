@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crypto Item Component Should match snapshot 1`] = `
+<tr>
+  <td
+    className="coinImageWrapper"
+  >
+    <img
+      alt="bitcoin"
+      className="coinImage"
+      src="http://www.test.com/some-image.jpg"
+    />
+  </td>
+  <td>
+    bitcoin
+  </td>
+  <td>
+    BITCOIN
+  </td>
+  <td
+    className="coinPrice"
+  >
+    123
+  </td>
+  <td>
+    125
+     / 
+    121
+  </td>
+  <td
+    className="priceUp"
+  >
+    5.25
+     %
+  </td>
+  <td
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    123123
+  </td>
+  <td>
+    <a
+      href="/coins/1"
+      onClick={[Function]}
+    >
+      <img
+        alt="bitcoin"
+        src="more.svg"
+      />
+    </a>
+  </td>
+</tr>
+`;

@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 import CoinData from './CoinData';
 
@@ -13,6 +14,11 @@ const coinData = {
     current_price: {
       usd: 123,
     },
+    price_change_percentage_24h: 1.23,
+    high_24h: { usd: 125 },
+    low_24h: { usd: 121 },
+    market_cap: { usd: 121123123 },
+    total_volume: { usd: 121123123 },
     sparkline_7d: {
       price: [
         56481.41661328395,
@@ -201,5 +207,12 @@ describe('CoinData Component', () => {
     );
 
     expect(document.querySelector('h2').textContent).toBe('bitcoin');
+  });
+
+  it('Should match snapshot', () => {
+    const component = renderer.create(<CoinData coinData={coinData} />);
+
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -2,7 +2,6 @@ import CoinChart from '../CoinChart/CoinChart';
 import styles from './CoinData.module.css';
 
 const CoinData = ({ coinData }) => {
-  console.log(coinData);
   return (
     <>
       {coinData ? (

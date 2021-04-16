@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component Should match snapshot for auth users 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <a
+        aria-current="page"
+        className="logoWrapper active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          alt="crypto helper"
+          className="logo"
+          src="logo.svg"
+        />
+        <h1
+          className="heading"
+        >
+          Crypterio
+        </h1>
+      </a>
+    </div>
+    <nav
+      className="navigation"
+    >
+      <ul
+        className="navWrapper"
+      >
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/portfolio"
+            onClick={[Function]}
+          >
+            Portfio
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/transactions"
+            onClick={[Function]}
+          >
+            Transactions
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/profile"
+            onClick={[Function]}
+          >
+            Profile
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLinkButton"
+            href="/buy"
+            onClick={[Function]}
+          >
+            Buy
+          </a>
+        </li>
+        <li
+          className="authBtn"
+          onClick={[Function]}
+        >
+          Logout
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`Navbar Component Should match snapshot for non auth users 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <a
+        aria-current="page"
+        className="logoWrapper active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          alt="crypto helper"
+          className="logo"
+          src="logo.svg"
+        />
+        <h1
+          className="heading"
+        >
+          Crypterio
+        </h1>
+      </a>
+    </div>
+    <nav
+      className="navigation"
+    >
+      <ul
+        className="navWrapper"
+      >
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/portfolio"
+            onClick={[Function]}
+          >
+            Portfio
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/transactions"
+            onClick={[Function]}
+          >
+            Transactions
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLink"
+            href="/profile"
+            onClick={[Function]}
+          >
+            Profile
+          </a>
+        </li>
+        <li
+          className="linkWrapper"
+        >
+          <a
+            aria-current={null}
+            className="navLinkButton"
+            href="/buy"
+            onClick={[Function]}
+          >
+            Buy
+          </a>
+        </li>
+        <li
+          className="authBtn"
+          onClick={[Function]}
+        >
+          Logout
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;

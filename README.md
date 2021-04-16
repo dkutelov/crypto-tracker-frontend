@@ -59,3 +59,15 @@ The state is hold in react context and managed by react reducer.
 
 - backend is deployed on Heroku:
   [https://blooming-basin-18460.herokuapp.com/api](https://blooming-basin-18460.herokuapp.com/api)
+
+### Unit testing
+
+- 10 unit tests in the following components:
+
+```
+ PASS  src/components/Profile/DisplayProfile/DisplayProfile.test.js
+ PASS  src/components/CryptoList/CryptoList.test.js
+ PASS  src/components/CryptoItem/CryptoItem.test.js
+ PASS  src/components/CoinData/CoinData.test.js
+ PASS  src/components/Navbar/Navbar/Navbar.test.js
+```

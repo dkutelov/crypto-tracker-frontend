@@ -71,3 +71,7 @@ The state is hold in react context and managed by react reducer.
  PASS  src/components/CoinData/CoinData.test.js
  PASS  src/components/Navbar/Navbar/Navbar.test.js
 ```
+
+### Exam requirements
+
+- class component wit state management: src/pages/Homepage/Homepage.js

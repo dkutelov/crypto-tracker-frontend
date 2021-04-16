@@ -21,9 +21,9 @@ const CryptoItem = ({
         <img src={image} alt={name} className='coinImage' />
       </td>
       <td>{name}</td>
-      <td>{symbol.toUpperCase()}</td>
+      <td className='noShowOnSmall'>{symbol.toUpperCase()}</td>
       <td className='coinPrice'>{formatPrice(price)}</td>
-      <td>
+      <td className='noShowOnSmall'>
         {formatPrice(highestPrice)} / {formatPrice(lowestPrice)}
       </td>
       <td className={priceChange < 0 ? 'priceDown' : 'priceUp'}>

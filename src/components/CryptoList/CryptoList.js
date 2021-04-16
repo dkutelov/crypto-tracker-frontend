@@ -4,14 +4,14 @@ import styles from './CryptoList.module.css';
 import CryptoContext from '../../context/cryptoContext';
 
 const headings = [
-  'Icon',
-  'Crypto',
-  'Symbol',
-  'Price',
-  'High/ Low 24h',
-  'Change',
-  'Volume',
-  'More',
+  { text: 'Icon', showOnSmall: false },
+  { text: 'Crypto', showOnSmall: true },
+  { text: 'Symbol', showOnSmall: false },
+  { text: 'Price', showOnSmall: true },
+  { text: 'H/L 24h', showOnSmall: false },
+  { text: 'Change', showOnSmall: true },
+  { text: 'Volume', showOnSmall: true },
+  { text: 'More', showOnSmall: true },
 ];
 
 const CryptoList = ({ searchTerm }) => {
@@ -27,9 +27,18 @@ const CryptoList = ({ searchTerm }) => {
       <table className={styles.wrapper}>
         <thead>
           <tr>
-            {headings.map((heading) => (
-              <th key={heading}>{heading}</th>
-            ))}
+            {headings.map((heading) => {
+              return (
+                <th
+                  key={heading.text}
+                  className={`${styles.tableHeading} ${
+                    heading.showOnSmall ? '' : styles.noShow
+                  }`}
+                >
+                  {heading.text}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>

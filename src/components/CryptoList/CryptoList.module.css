@@ -6,7 +6,33 @@
 }
 
 .wrapper {
-  max-width: 950px;
-  margin-top: 2em;
-  border-spacing: 15px;
+  max-width: 100%;
+  margin-top: 1em;
+  border-spacing: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 950px;
+    margin-top: 2em;
+    border-spacing: 15px;
+  }
+}
+
+.tableHeading {
+  font-size: 0.7em;
+  padding: 0.25em;
+}
+
+@media only screen and (min-width: 768px) {
+  .tableHeading {
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .noShow {
+    display: none;
+  }
 }

@@ -6,15 +6,24 @@
 
 .searchInnerWrapper {
   position: relative;
+  z-index: 99;
 }
 
 .searchInput {
-  padding: 1em 2em;
+  padding: 0.75em 1.25em;
   border: none;
   background-color: #f9f9f9;
-  border-radius: 15px;
-  font-size: 1.25em;
+  border-radius: 10px;
+  font-size: 1em;
   color: #27be94;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchInput {
+    padding: 1em 2em;
+    border-radius: 15px;
+    font-size: 1.25em;
+  }
 }
 
 .searchInput:focus {
@@ -22,10 +31,19 @@
 }
 
 .clearIcon {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 22px;
+  top: 12px;
   right: 0.5em;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .clearIcon {
+    width: 20px;
+    height: 20px;
+    top: 22px;
+    right: 0.5em;
+  }
 }

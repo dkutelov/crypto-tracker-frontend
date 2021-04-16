@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../../assets/icons/logo.svg';
 import styles from './Navbar.module.css';
-import UserContext from '../../context/userContext';
+import UserContext from '../../../context/userContext';
 
 const Navbar = () => {
   const {
@@ -17,7 +17,7 @@ const Navbar = () => {
     history.push('/');
   }
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.container}>
         <div>
           <NavLink to='/' className={styles.logoWrapper}>
@@ -25,26 +25,26 @@ const Navbar = () => {
             <h1 className={styles.heading}>Crypterio</h1>
           </NavLink>
         </div>
-        <nav>
+        <nav className={styles.navigation}>
           <ul className={styles.navWrapper}>
             {isAuthenticated ? (
               <>
-                <li>
+                <li className={styles.linkWrapper}>
                   <NavLink to='/portfolio' className={styles.navLink}>
                     Portfio
                   </NavLink>
                 </li>
-                <li>
+                <li className={styles.linkWrapper}>
                   <NavLink to='/transactions' className={styles.navLink}>
                     Transactions
                   </NavLink>
                 </li>
-                <li>
+                <li className={styles.linkWrapper}>
                   <NavLink to='/profile' className={styles.navLink}>
                     Profile
                   </NavLink>
                 </li>
-                <li>
+                <li className={styles.linkWrapper}>
                   <NavLink to='/buy' className={styles.navLinkButton}>
                     Buy
                   </NavLink>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </li>
               </>
             ) : (
-              <li>
+              <li className={styles.linkWrapper}>
                 <NavLink to='/auth/login' className={styles.authBtn}>
                   Login
                 </NavLink>

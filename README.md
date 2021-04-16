@@ -30,6 +30,7 @@ The application allows authenticated users to monitor the current value of their
 - react-cropper for avatar cropping
 - firebase storage - image upload for avatar
 - react stripe checkout for payment via Stripe
+- framer motion for mobile navigation and error component animaitons
 
 ### App state
 
@@ -38,7 +39,8 @@ The application creates and manages a central state for:
 - user
 - portfolio
 - error.
-  The state is hold in react context and managed by react reducer.
+
+The state is hold in react context and managed by react reducer.
 
 ### `External API`
 
@@ -47,8 +49,8 @@ The application creates and manages a central state for:
 
 ### `Backend`
 
-- for backend code check this link:
-  [Link to backend repo](https://github.com/dkutelov/crypto-tracker-backend)
+- for backend code link to repo:
+  [https://github.com/dkutelov/crypto-tracker-backend](https://github.com/dkutelov/crypto-tracker-backend)
 
 - backend is deployed on Heroku:
   [https://blooming-basin-18460.herokuapp.com/api](https://blooming-basin-18460.herokuapp.com/api)

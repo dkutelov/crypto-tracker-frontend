@@ -1,5 +1,4 @@
 function portfolioReducer(portfolioState, { type, payload }) {
-  console.log('from reducer', type, payload);
   switch (type) {
     case 'SET_PORTFOLIO':
       return {

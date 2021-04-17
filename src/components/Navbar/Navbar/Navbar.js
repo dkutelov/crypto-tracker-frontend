@@ -17,53 +17,51 @@ const Navbar = () => {
     history.push('/');
   }
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <div>
-          <NavLink to='/' className={styles.logoWrapper}>
-            <img src={logo} alt='crypto helper' className={styles.logo} />
-            <h1 className={styles.heading}>Crypterio</h1>
-          </NavLink>
-        </div>
-        <nav className={styles.navigation}>
-          <ul className={styles.navWrapper}>
-            {isAuthenticated ? (
-              <>
-                <li className={styles.linkWrapper}>
-                  <NavLink to='/portfolio' className={styles.navLink}>
-                    Portfolio
-                  </NavLink>
-                </li>
-                <li className={styles.linkWrapper}>
-                  <NavLink to='/transactions' className={styles.navLink}>
-                    Transactions
-                  </NavLink>
-                </li>
-                <li className={styles.linkWrapper}>
-                  <NavLink to='/profile' className={styles.navLink}>
-                    Profile
-                  </NavLink>
-                </li>
-                <li className={styles.linkWrapper}>
-                  <NavLink to='/buy' className={styles.navLinkButton}>
-                    Buy
-                  </NavLink>
-                </li>
-                <li className={styles.authBtn} onClick={handleLogout}>
-                  Logout
-                </li>
-              </>
-            ) : (
+    <div className={styles.container}>
+      <div>
+        <NavLink to='/' className={styles.logoWrapper}>
+          <img src={logo} alt='crypto helper' className={styles.logo} />
+          <h1 className={styles.heading}>Crypterio</h1>
+        </NavLink>
+      </div>
+      <nav className={styles.navigation}>
+        <ul className={styles.navWrapper}>
+          {isAuthenticated ? (
+            <>
               <li className={styles.linkWrapper}>
-                <NavLink to='/auth/login' className={styles.authBtn}>
-                  Login
+                <NavLink to='/portfolio' className={styles.navLink}>
+                  Portfolio
                 </NavLink>
               </li>
-            )}
-          </ul>
-        </nav>
-      </div>
-    </header>
+              <li className={styles.linkWrapper}>
+                <NavLink to='/transactions' className={styles.navLink}>
+                  Transactions
+                </NavLink>
+              </li>
+              <li className={styles.linkWrapper}>
+                <NavLink to='/profile' className={styles.navLink}>
+                  Profile
+                </NavLink>
+              </li>
+              <li className={styles.linkWrapper}>
+                <NavLink to='/buy' className={styles.navLinkButton}>
+                  Buy
+                </NavLink>
+              </li>
+              <li className={styles.authBtn} onClick={handleLogout}>
+                Logout
+              </li>
+            </>
+          ) : (
+            <li className={styles.linkWrapper}>
+              <NavLink to='/auth/login' className={styles.authBtn}>
+                Login
+              </NavLink>
+            </li>
+          )}
+        </ul>
+      </nav>
+    </div>
   );
 };
 

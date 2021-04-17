@@ -22,6 +22,7 @@ const CryptoList = ({ searchTerm }) => {
       coin.id.startsWith(searchTerm.toLowerCase())
     );
   }
+
   return (
     <div className={styles.container}>
       <table className={styles.wrapper}>

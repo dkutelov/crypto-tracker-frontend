@@ -83,9 +83,6 @@ const BuyCoin = () => {
             onChange={handleInputChange}
             className='field'
           />
-          {/* <span className={styles.error}>
-            {formErrors.amount && formErrors.amount}
-          </span> */}
         </div>
         {price && amount && (
           <div className='info-section'>
@@ -99,6 +96,11 @@ const BuyCoin = () => {
             <StripePaymentButton
               price={price * amount}
               disabled={!price && !amount}
+              transaction={{
+                coinId: coin,
+                price,
+                amount,
+              }}
             />
           </div>
           <div className='info-credit-card'>

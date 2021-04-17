@@ -35,27 +35,25 @@ const MobileNavbar = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <motion.nav
-          initial={false}
-          animate={isOpen ? 'open' : 'closed'}
-          custom={height}
-          ref={containerRef}
-          className={styles.nav}
-        >
-          <motion.div className='background' variants={sidebar} />
-          <Navigation />
-          <MenuToggle toggle={() => toggleOpen()} />
-        </motion.nav>
-        <div>
-          <NavLink to='/' className={styles.logoWrapper}>
-            <img src={logo} alt='crypto helper' className={styles.logo} />
-            <h1 className={styles.heading}>Crypterio</h1>
-          </NavLink>
-        </div>
+    <div className={styles.container}>
+      <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={height}
+        ref={containerRef}
+        className={styles.nav}
+      >
+        <motion.div className='background' variants={sidebar} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav>
+      <div>
+        <NavLink to='/' className={styles.logoWrapper}>
+          <img src={logo} alt='crypto helper' className={styles.logo} />
+          <h1 className={styles.heading}>Crypterio</h1>
+        </NavLink>
       </div>
-    </header>
+    </div>
   );
 };
 

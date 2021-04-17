@@ -1,5 +1,4 @@
 function errorReducer(errorState, { type, payload }) {
-  console.log('from error reducer', type, payload);
   switch (type) {
     case 'SET_ERROR_MESSAGE':
       return {
